@@ -169,6 +169,11 @@ body{
 .ul-1 li{
     list-style: none;
 }
+@media(max-width:600px){
+     .section1 {
+       font-size:0.9em:
+    }
+}
 /***/
 /*Boton*/
 .contactos-con{
