@@ -1,0 +1,359 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+    background-image: url(/assets/337689622_606819744687795_4463476993346729155_n.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+/*Cabecera*/
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.arriba{
+    display: inherit;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #6e1615;
+}
+.mxm-img{
+    display: inline-block;
+    width: 40px;
+    
+}
+.usa-img{
+    display: inline-block;
+    width: 40px;
+
+}
+.idioma{
+    display: inherit;
+    flex-grow: 1;
+    justify-content: center;
+}
+ .logo{
+    flex-shrink: 8;
+    padding: 15px;
+   
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+.logo-img{
+    
+    display: inline-block;
+    width: 150px;    
+}
+.compra{
+    
+    flex-grow: 1;
+    display: inherit;
+    align-items: center;
+    justify-items:center;
+}
+.mexico{
+    display: inline-block;
+    padding-top: 9px;
+}
+.usa{
+    display: inline-block;
+   
+}
+
+.material-symbols-outlined{
+    font-size: 40px;
+    flex-grow: 5;
+    justify-items: center;
+    display: inherit;
+}
+.shopping{
+    
+    justify-content: center;
+}
+.person{
+     
+    flex-shrink: 3;
+}
+.log{
+    color: bisque;
+}
+.abajo{
+    background-color: #591d1a;
+    display:inherit;
+    
+    
+}
+.compra>a,.shopping>a{
+    text-decoration: none;
+    color:bisque;
+}
+.compra>a{
+    display:inherit;
+    flex-direction: column;
+
+}
+.abajo a{
+    display: inherit;
+    justify-content: center;
+    text-decoration: none;
+    color: bisque;
+}
+.abajo a{
+    flex-grow: 2;
+}
+
+@media(hover:hover){
+    .abajo a:hover{
+        background-color: bisque;
+        color: #591d1a;
+        transition: .6s;
+    }
+    .btn-contactos:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .whatsapp:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .instagram:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .correo:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+        cursor: pointer;
+    }
+    .telefono:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+
+     .iw:hover, .ii:hover, .im:hover, .ip:hover{
+        color: #591d1a;
+        cursor: pointer;
+    }
+    .boton:hover{
+        color: darkgray;
+        background-color: white;
+        transition: .6s;
+        border: 2px solid white;
+    }
+    .link:hover{
+        color: darkgray;
+        
+    }
+    .boton2 a:hover{
+        color: darkgray;
+    }
+    .boton1:hover{
+        background-color: white;
+        color: darkgray;
+        border: 2px solid white;
+        transition: .6s;
+    }
+    .boton2:hover{
+        background-color: white;
+        color: darkgray;
+        border: 2px solid white;
+        transition: .6s;
+    }
+}
+.main{
+    display: grid;
+    grid-template-columns: 1fr 3fr 1fr;
+    align-content: center;
+    height: 150vh;
+
+}
+.articlemain{
+    display: grid;
+    grid-template-rows: repeat(2,1fr);
+    justify-items: center;
+    
+}
+.section-form-inicio h2{
+    justify-self: center;
+    display: inline-block;
+    height: 5vh;
+    color:#6e1615;
+}
+.Formulario{
+    display: grid;
+    grid-template-rows: repeat(2, 1fr);
+    padding: 2px;
+    gap: 10px;
+}
+.Formulario input {
+    width:50%
+}
+.Formulario label{
+    font-size: 1.2em;
+    color:#591d1a;
+}
+.texto{
+    border:none;
+    outline: none;
+    border-bottom: 2px solid darkgrey;
+    background-color: inherit;
+}
+.boton1{
+    background-color:darkgray;
+    border: 2px solid darkgray ;
+    border-radius: 10px;
+    
+    display: grid;
+    align-self: center;
+}
+.boton2{
+    background-color:darkgray;
+    border: 2px solid darkgray ;
+    border-radius: 10px;
+    
+    display: grid;
+    align-self: center;
+}
+.boton2 a{
+    text-decoration: none;
+    color: white;
+    display: inherit;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+.link{
+    text-decoration: none;
+    color: white;
+    display: inherit;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+}
+
+
+.section-form-inicio{
+    
+    background-color: rgba(255, 228, 196, 0.61);
+    border-radius: 10px;
+    padding: 10px;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    box-shadow: 10px 10px;
+    border:2px dashed black ;
+}
+
+.boton{
+    background-color:darkgray;
+    border: 2px solid darkgray ;
+    border-radius: 10px;
+    color: white;
+}
+/***/
+/*Boton*/
+.contactos-con{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 50px;
+}
+
+.btn-contactos,.whatsapp,.instagram,.correo,.telefono{
+    
+    height: 10vh;
+    background-color: #6e1615;
+    border: 2px solid #661b19;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: bisque;    
+    margin: 0;
+}
+.btn-contactos{
+    font-size:  .8em;;
+}
+.whatsapp,.instagram,.correo,.telefono{
+    font-size: 1.5em;
+   
+}
+
+.todos-cont{
+    
+    visibility: hidden;
+    margin-bottom: -100%;
+    transition: all 500ms ease-in;
+}
+.abierto{
+    display: inline-block;
+    visibility: visible;
+    margin-top: -200%;
+    transition: all 500ms ease-in;
+}/*******/
+
+/**Pie de página*/
+.footer{
+    
+    width: 100%;
+    background-color: #260000;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    height: 20vh;
+    position: absolute;
+}
+.contactos-footer{
+    border-right: white solid 2px;
+}
+.AP{
+    color: bisque;
+}
+.AP a{
+    text-decoration: none;
+    color: inherit;
+}
+.derechaf{
+    border-right: white solid 2px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.iw, .ii, .im, .ip,.direccion{
+    color: bisque;
+}
+.contactos-footer{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+}
+.direccion{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.instagram-qr {
+    margin-left: auto;
+    margin-right: auto;
+}
+

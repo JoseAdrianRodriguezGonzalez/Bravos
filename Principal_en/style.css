@@ -1,0 +1,351 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+}
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.arriba{
+    display: inherit;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #6e1615;
+}
+.mxm-img{
+    display: inline-block;
+    width: 40px;
+    
+}
+.usa-img{
+    display: inline-block;
+    width: 40px;
+
+}
+.idioma{
+    display: inherit;
+    flex-grow: 1;
+    justify-content: center;
+}
+ .logo{
+    flex-shrink: 8;
+    padding: 15px;
+   
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+.logo-img{
+    
+    display: inline-block;
+    width: 150px;    
+}
+.compra{
+    
+    flex-grow: 1;
+    display: inherit;
+    align-items: center;
+    justify-items:center;
+}
+.mexico{
+    display: inline-block;
+    padding-top: 9px;
+}
+.usa{
+    display: inline-block;
+   
+}
+
+.material-symbols-outlined{
+    font-size: 40px;
+    flex-grow: 5;
+    justify-items: center;
+    display: inherit;
+}
+.shopping{
+    
+    justify-content: center;
+}
+.person{
+     
+    flex-shrink: 3;
+}
+.log{
+    color: bisque;
+}
+.abajo{
+    background-color: #591d1a;
+    display:inherit;
+    
+    
+}
+.compra>a,.shopping>a{
+    text-decoration: none;
+    color:bisque;
+}
+.compra>a{
+    display:inherit;
+    flex-direction: column;
+
+}
+.abajo a{
+    display: inherit;
+    justify-content: center;
+    text-decoration: none;
+    color: bisque;
+}
+.abajo a{
+    flex-grow: 2;
+}
+
+@media(hover:hover){
+    .abajo a:hover{
+        background-color: bisque;
+        color: #591d1a;
+        transition: .6s;
+    }
+    .btn-contactos:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .whatsapp:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .instagram:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .correo:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+        cursor: pointer;
+    }
+    .telefono:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .derecha:hover{
+        color: bisque;
+        transition: .6s;
+    }
+    .izquierda:hover{
+        color: bisque;
+        transition: .6s;
+    }
+    .text1:hover{
+        color: aliceblue;
+        transition: .6s;
+     }
+     .iw:hover, .ii:hover, .im:hover, .ip:hover{
+        color: #591d1a;
+        cursor: pointer;
+    }
+}
+.contactos-con{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 50px;
+}
+
+.btn-contactos,.whatsapp,.instagram,.correo,.telefono{
+    
+    height: 10vh;
+    background-color: #6e1615;
+    border: 2px solid #661b19;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: bisque;    
+    margin: 0;
+}
+.btn-contactos{
+    font-size:  .8em;;
+}
+.whatsapp,.instagram,.correo,.telefono{
+    font-size: 1.5em;
+   
+}
+
+.todos-cont{
+    
+    visibility: hidden;
+    margin-bottom: -100%;
+    transition: all 500ms ease-in;
+}
+.abierto{
+    display: inline-block;
+    visibility: visible;
+    margin-top: -200%;
+    transition: all 500ms ease-in;
+}
+
+.slider{
+    overflow: hidden;
+    width: 55%;
+    max-width: 1500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.grupo{
+    display:flex;
+    width: 600%;
+    height: 600px;
+}
+.slider_img{
+    width:100%;
+    
+}
+.slider_img img{
+    width: 100%;
+    height: 100%;
+}
+
+.derecha,.izquierda{
+    position: absolute;
+}
+.seccion-mayor{
+    position: relative;
+}
+.derecha{
+    right: 0;
+    top: 50%;;
+    
+    font-size: 3em;
+}
+.izquierda{
+    left: 0;
+    top:50%;
+  
+    font-size: 3em;
+}
+.animacion{
+    transition: all ease-in 0.8s;
+    margin-left: -200%;
+}
+
+.seccion{
+    display: grid;
+
+
+}
+.ropa{
+    display: grid;
+    margin-top: 5%;
+    grid-template-columns: repeat(3,1fr);
+    grid-auto-columns: minmax(100px,auto);
+    justify-items: center;
+    position: relative;
+}
+.img7{
+    width: 100%;
+}
+
+
+.video{
+    width: 100%;
+}
+.anima{
+    width: inherit;
+}
+.sombreros2{
+    align-self: center;
+    justify-self: stretch;
+    position: relative;
+    display: grid;
+    background-color: #260000;
+}
+.l1{
+    display:grid;
+   text-decoration: none;
+   
+   grid-template-columns: 250
+    ;
+   
+}
+
+.img7{
+   position: relative;
+   opacity:.5;
+}
+.text1{
+    
+    justify-self: center;
+    position: absolute;
+    align-self: center;
+    font-size: 1.5rem;
+    color:black;
+   
+    
+    
+}
+
+.footer{
+    
+    width: 100%;
+    background-color: #260000;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    height: 20vh;
+    position: absolute;
+}
+.contactos-footer{
+    border-right: white solid 2px;
+}
+.AP{
+    color: bisque;
+}
+.AP a{
+    text-decoration: none;
+    color: inherit;
+}
+.derechaf{
+    border-right: white solid 2px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.iw, .ii, .im, .ip,.direccion{
+    color: bisque;
+}
+.contactos-footer{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+}
+.direccion{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.instagram-qr {
+    margin-left: auto;
+    margin-right: auto;
+}
+
