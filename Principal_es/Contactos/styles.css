@@ -7,6 +7,7 @@ body{
     background-image: url(/assets/337689622_606819744687795_4463476993346729155_n.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    background-size: 200%;
 }
 /*Cabecera*/
 .header{
@@ -157,7 +158,7 @@ body{
 }
 .section1{
     margin: 10% auto 10% auto;
-    font-size: 1.6em;
+    font-size: 2em;
     width: 60%;
     padding: 5%;
     color:#661b19;
@@ -173,12 +174,8 @@ body{
     list-style: none;
 }
 @media(max-width:1000px){
-     .section1 {
-       font-size:0.6em;
-    }
-     .ul-1{
-     font-size:inherit; 
-      }
+
+
 }
 /***/
 /*Boton*/
