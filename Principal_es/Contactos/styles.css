@@ -172,6 +172,14 @@ body{
 .ul-1 li{
     list-style: none;
 }
+@media(max-width:1000px){
+     .section1 {
+       font-size:0.9em:
+    }
+     .ul-1{
+     font-size:inherit; 
+      }
+}
 /***/
 /*Boton*/
 .contactos-con{
