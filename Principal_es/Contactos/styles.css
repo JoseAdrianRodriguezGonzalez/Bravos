@@ -167,14 +167,14 @@ body{
     
 }
 .ul-1{
-    padding: 0;
+    padding-inline-start: 0;
 }
 .ul-1 li{
     list-style: none;
 }
 @media(max-width:1000px){
      .section1 {
-       font-size:0.9em:
+       font-size:0.6em;
     }
      .ul-1{
      font-size:inherit; 
