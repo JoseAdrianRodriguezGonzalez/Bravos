@@ -166,6 +166,9 @@ body{
     box-shadow: 10px 10px 10px;
     
 }
+.ul-1{
+    padding: 0;
+}
 .ul-1 li{
     list-style: none;
 }
