@@ -7,7 +7,7 @@ body{
     background-image: url(/assets/337689622_606819744687795_4463476993346729155_n.webp);
     background-repeat: no-repeat;
     background-size: cover;
-    background-size: 200%;
+    height: 200%;
 }
 /*Cabecera*/
 .header{
