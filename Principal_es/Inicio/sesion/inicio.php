@@ -1,5 +1,5 @@
 <?php
-    require "Principal_es/Inicio/Crear/connect.php";
+    require "/xampp/htdocs/bravo/Principal_es/Inicio/Crear/connect.php";
    //Clase usuario
     class user {
         //datos, nombre y nombre de usuario 
