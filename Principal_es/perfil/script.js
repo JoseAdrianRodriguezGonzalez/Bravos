@@ -1,3 +1,5 @@
+/**Manejo del front */
+
 let mx =document.getElementById('mexico');
 let usa=document.getElementById('usa');
 let correo=document.getElementById('correo');
@@ -34,4 +36,30 @@ contactos.addEventListener('click',()=>{
         
     }
 });
+/**uso de ajax para obterne runa varibale y un json  */
+let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php";
+let request = new XMLHttpRequest();
 
+request.open('POST', '/Principal_es/perfil/Variables.php', true);
+request.addEventListener("load",()=>{
+    if (this.status >= 200 && this.status < 400) {
+        // Success
+        let parsed_response = JSON.parse(this.response.trim());
+        console.log(parsed_response);
+    } else {
+        // Error
+        console.log(this.response);
+    }
+})
+request.addEventListener("error",()=>{
+    console.log('Connection error!');
+})
+/*
+request.onload = function() {
+    
+};
+request.onerror = function() {
+
+};*/
+request.send();
+/**Manejo de los JSON */

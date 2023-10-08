@@ -15,6 +15,9 @@
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon.ico"/>
     <script src="/SrcollReveal/scrollreveal.js"></script>
     <title>Tienda-Bravo's Boots &hats</title>
+    <?php
+
+    ?>
 </head>
 <body>
     <header class="header">  
@@ -23,7 +26,7 @@
                 <span class="mexico" id="mexico"><img src="/assets/mxmexicoflag_111665.png" alt="" class="mxm-img" title="Español"></span>
                 <span class="usa" id="usa"><img src="/assets/UnitedStates_US_USA_840_Flag1_26093.png" alt="usa" class="usa-img" title="English"></span>
             </div>
-            <div class="logo"><a href="/Principal_es/index.html" title="Principal">
+            <div class="logo"><a href="/Principal_es/index.php" title="Principal">
                 <img src="/assets/BRAVOS STIKERSo.png" alt="" class="logo-img" title="Principal">
             </a>
             </div>
@@ -31,11 +34,11 @@
                 <span class="material-symbols-outlined shopping">
                    <a href="#"> shopping_cart </a>
                     </span>
-                <a href="/Principal_es/Inicio/sesion/index.html">    
+                <a href="/Principal_es/Inicio/sesion/index.php" id="padrea"s>    
                     <span class="material-symbols-outlined person">
                     person
                     </span>
-                    <span class="log"> iniciar sesión</span>    
+                    <span class="log" id="log"> iniciar sesión</span>    
                 </a>
             </div>
         </div>
@@ -45,12 +48,12 @@
                     SOMBREROS
                 </div>
             </a>
-            <a href="/Principal_es/Nosotros/index.html">
+            <a href="/Principal_es/Nosotros/index.php">
                 <div class="nosotros">
                     NOSOTROS
                 </div>
             </a>
-            <a href="/Principal_es/Contactos/index.html">
+            <a href="/Principal_es/Contactos/index.php">
                 <div class="contactos">
                     CONTACTOS
                 </div>
@@ -85,16 +88,63 @@
             </div>
         </div>
         <section class="section1">
-            Este sitio web, que es una plataforma de e-commerce, establecida en el domicilio Tampico #704 colonia Bellavista Salamanca,Gto, en la cual, el manejo de los datos está sujeta a la Ley Federal de Protección de Datos Personales en Posesión de Particulares(LFPDPPP), ley que da mesura al manejo de datos personales, con el fin de dar fidelidad a los tratados y acuerdos establecidos en el presente acuerdo de privacidad.
-La finalidad de la recabar datos, son necesarios para poder ofrecer mejor nuestros servicios, así como dar mayor seguridad al realizar las compras; la validación de la identidad, a su vez, como la recopilación de historial de compras, métodos de pago y entrega del producto.
-Los datos personales que usted otorga bajo la tienda Bravo's boots and hats, son completamente confidenciales sin fines de lucro y aunado a ello, se presentan medidas de seguridad para proteger sus datos, como codificación SSL,(Secure Socket Layer), así como también medidas de seguridad que impidan intrusión forzada a su cuenta.
-Dado a ello, al presente acuerdo muestra como la aceptación del contrato que existe entre usuario y la tienda Bravo's Boots and Hats, dando así, cómo conocimiento a lo estipulado en el acuerdo
+
+            <div class="Name-container">
+                <span class="Name" id="Name-1">
+                    Nombre: 
+                </span>
+            </div>
+            <div class="last-Name-Container">
+                <span class="last-Name" id="last-Name-1">
+                    Apellidos:
+                </span>
+            </div>
+            <div class="phone-container">
+                <span class="phone" id="phone-1">
+                    Teléfono:
+                </span>
+            </div>
+            <div class="pass-container">
+                <span class="pass" id="pass-1">
+                    Contraseña:
+                </span>
+            </div>
+            <div class="adress-container">
+                <span class="adress" id="adress-1">
+                    Dirección:
+                </span>
+            </div>
+            <div class="city-container">
+                <span class="city" id="city-1">
+                    Ciudad: 
+                </span>
+            </div>
+            <div class="state-container">
+                <span class="state" id="state-1">
+                    Estado: 
+                </span>                
+            </div>
+            <div class="country">
+                <span class="Name" id="Name-1">
+                    País: 
+                </span>                
+            </div>
+            <div class="zip-container">
+                <span class="Name" id="Name-1">
+                    Código Postal: 
+                </span>                
+            </div>
+            <div class="mail">
+                <span class="Name" id="Name-1">
+                    Correo: 
+                </span>
+            </div>
         </section>
     </main>
     <footer class="footer">
         <div class="contactos-footer">
             <span class="AP">
-                <a href="/Principal_es/Privacidad/index.html">Aviso de privacidad</a>
+                <a href="/Principal_es/Privacidad/index.php">Aviso de privacidad</a>
             </span>
         </div>
         <div class="derechaf">
@@ -122,5 +172,8 @@ Dado a ello, al presente acuerdo muestra como la aceptación del contrato que ex
         </div>
     </footer>
     <script src="script.js"></script>
+    <script type="text/javascript">
+
+    </script>
 </body>
 </html>
