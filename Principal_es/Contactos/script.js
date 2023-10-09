@@ -75,4 +75,5 @@ const ManejarJSON=(JSONPHP)=>{
     ini2.textContent=texto;
     ini.append(ini2)
     link.replaceChild(ini2,ini);
+    link.setAttribute("href","/Principal_es/perfil/index.html");
 }
