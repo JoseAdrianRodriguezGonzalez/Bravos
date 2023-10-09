@@ -128,16 +128,6 @@
         </div>
     </footer>
     <script src="/Principal_es/Nosotros/script.js"></script>
-    <script type="text/javascript">
-        let texto="<?php echo $nombre?>";
-        let ini=document.getElementById('log');
-        let link=document.getElementById('padrea');
-        const ini2=document.createElement('span');
-        ini2.classList.add('ini2','log');
-        ini2.textContent=texto;
-        ini.append(ini2)
-        link.replaceChild(ini2,ini);
-       
-    </script>
+
 </body>
 </html>

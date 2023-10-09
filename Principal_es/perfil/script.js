@@ -41,25 +41,53 @@ let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php";
 let request = new XMLHttpRequest();
 
 request.open('POST', '/Principal_es/perfil/Variables.php', true);
-request.addEventListener("load",()=>{
+
+request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Success
         let parsed_response = JSON.parse(this.response.trim());
         console.log(parsed_response);
+        ManejarJSON(parsed_response);
     } else {
         // Error
         console.log(this.response);
     }
-})
-request.addEventListener("error",()=>{
-    console.log('Connection error!');
-})
-/*
-request.onload = function() {
-    
 };
 request.onerror = function() {
-
-};*/
+    console.log('Connection error!');
+};
 request.send();
-/**Manejo de los JSON */
+/**Manejo de los AJAX */
+const EncontrarDato=(Arreglo)=>{
+    for(key in Arreglo) {
+        if(Arreglo.hasOwnProperty(key)) {
+            let value = Arreglo[key];
+            //do something with value;
+            return value["Nombre"]
+        }
+    }
+}
+const ManejarJSON=(JSONPHP)=>{
+    let texto=EncontrarDato(JSONPHP);
+    let ini=document.getElementById('log');
+    let link=document.getElementById('padrea');
+    const ini2=document.createElement('span');
+    ini2.classList.add('ini2','log');
+    ini2.textContent=texto;
+    ini.append(ini2)
+    link.replaceChild(ini2,ini);
+
+}
+/**
+ * 
+ * 
+ *         let texto="<?php echo $nombre?>";
+        let ini=document.getElementById('log');
+        let link=document.getElementById('padrea');
+        const ini2=document.createElement('span');
+        ini2.classList.add('ini2','log');
+        ini2.textContent=texto;
+        ini.append(ini2)
+        link.replaceChild(ini2,ini);
+    </script>
+ */

@@ -195,15 +195,6 @@
   //include_once "Principal_es/index.php"
     ?>
     <script src="/Principal_es/script.js"></script>
-    <script type="text/javascript">
-        let texto="<?php echo $nombre?>";  //Busca la variable nombre en php
-        let ini=document.getElementById('log'); //Obtiene los id de inicio de sesión y del enlace padre
-        let link=document.getElementById('padrea');
-        const ini2=document.createElement('span');//Crea un span donde se coloca el nombre de usuario
-        ini2.classList.add('ini2','log');
-        ini2.textContent=texto;
-        ini.append(ini2)
-        link.replaceChild(ini2,ini);
-    </script>
+
 </body>
 </html>

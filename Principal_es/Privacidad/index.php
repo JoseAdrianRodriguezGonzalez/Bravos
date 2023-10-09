@@ -131,15 +131,5 @@ Dado a ello, al presente acuerdo muestra como la aceptación del contrato que ex
         </div>
     </footer>
     <script src="script.js"></script>
-    <script type="text/javascript">
-        let texto="<?php echo $nombre?>";
-        let ini=document.getElementById('log');
-        let link=document.getElementById('padrea');
-        const ini2=document.createElement('span');
-        ini2.classList.add('ini2','log');
-        ini2.textContent=texto;
-        ini.append(ini2)
-        link.replaceChild(ini2,ini);
-    </script>
 </body>
 </html>
