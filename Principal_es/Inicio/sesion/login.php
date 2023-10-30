@@ -102,7 +102,7 @@
                     <input type="password" id="passcreated" class="texto" name="pass">
                     <input type="submit" value="Iniciar sesión" class="boton">
                     <span>¿Se te olvidó laa contraseña?,recuperala aquí</span>
-                    <span class="boton2"><a href="">Cambiar contraseña</a></span>
+                    <span class="boton2"><a href="/Principal_es/NuevaContra/index.html">Cambiar contraseña</a></span>
                     <span>¿No tienes cuenta con nosotros? cree una aquí</span>
                     <span class="boton1"><a href="/Principal_es/Inicio/Crear/index.html" class="link"><span></span>Crear cuenta</a></span>
                 </form>

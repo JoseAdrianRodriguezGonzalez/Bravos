@@ -1,0 +1,261 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+    background-image: url(/assets/337648911_748493476899811_8730901925126939753_n.webp);
+    background-repeat: no-repeat;
+    background-size:cover;
+}
+/*Cabecera*/
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+.arriba{
+    display: inherit;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #6e1615;
+}
+.mxm-img{
+    display: inline-block;
+    width: 40px;
+    
+}
+.usa-img{
+    display: inline-block;
+    width: 40px;
+
+}
+.idioma{
+    display: inherit;
+    flex-grow: 1;
+    justify-content: center;
+}
+ .logo{
+    flex-shrink: 8;
+    padding: 15px;
+   
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}
+.logo-img{
+    
+    display: inline-block;
+    width: 150px;    
+}
+.compra{
+    
+    flex-grow: 1;
+    display: inherit;
+    align-items: center;
+    justify-items:center;
+}
+.mexico{
+    display: inline-block;
+    padding-top: 9px;
+}
+.usa{
+    display: inline-block;
+   
+}
+
+.material-symbols-outlined{
+    font-size: 40px;
+    flex-grow: 5;
+    justify-items: center;
+    display: inherit;
+}
+.shopping{
+    
+    justify-content: center;
+}
+.person{
+     
+    flex-shrink: 3;
+}
+.log{
+    color: bisque;
+}
+.abajo{
+    background-color: #591d1a;
+    display:inherit;
+    
+    
+}
+.compra>a,.shopping>a{
+    text-decoration: none;
+    color:bisque;
+}
+.compra>a{
+    display:inherit;
+    flex-direction: column;
+
+}
+.abajo a{
+    display: inherit;
+    justify-content: center;
+    text-decoration: none;
+    color: bisque;
+}
+.abajo a{
+    flex-grow: 2;
+}
+
+@media(hover:hover){
+    .abajo a:hover{
+        background-color: bisque;
+        color: #591d1a;
+        transition: .6s;
+    }
+
+    .btn-contactos:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .whatsapp:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .instagram:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .correo:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+        cursor: pointer;
+    }
+    .telefono:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+
+     .iw:hover, .ii:hover, .im:hover, .ip:hover{
+        color: #591d1a;
+        cursor: pointer;
+    }
+}
+.article{
+    width: 60%;
+    margin: 10% auto 10% auto ;
+    
+    background-color: rgba(255, 228, 196, 0.699);
+    border-radius: 50px;
+    padding: 5%;
+    border-style: dashed;
+    box-shadow: 10px 20px 10px;
+}
+/***/
+/*Boton*/
+.contactos-con{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 50px;
+}
+
+.btn-contactos,.whatsapp,.instagram,.correo,.telefono{
+    
+    height: 10vh;
+    background-color: #6e1615;
+    border: 2px solid #661b19;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: bisque;    
+    margin: 0;
+}
+.btn-contactos{
+    font-size:  .8em;;
+}
+.whatsapp,.instagram,.correo,.telefono{
+    font-size: 1.5em;
+   
+}
+
+
+.todos-cont{
+    visibility: hidden;
+    margin-bottom: -100%;
+    transition: all 500ms ease-in;
+}
+.abierto{
+    display: inline-block;
+    visibility: visible;
+    margin-top: -200%;
+    transition: all 500ms ease-in;
+}/*******/
+
+
+/**Pie de página*/
+.footer{
+    
+    width: 100%;
+    background-color: #260000;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+    height: 20vh;
+    position: absolute;
+    
+}
+.contactos-footer{
+    border-right: white solid 2px;
+}
+.AP{
+    color: bisque;
+}
+.AP a{
+    text-decoration: none;
+    color: inherit;
+}
+.derechaf{
+    border-right: white solid 2px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.iw, .ii, .im, .ip,.direccion{
+    color: bisque;
+}
+.contactos-footer{
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+}
+.direccion{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}
+.instagram-qr {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+

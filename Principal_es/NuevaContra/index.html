@@ -15,10 +15,10 @@
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon.ico"/>
     <script src="/SrcollReveal/scrollreveal.js"></script>
     <title>Tienda-Bravo's Boots &hats</title>
+
 </head>
 <body>
-    <header class="header">
-        
+    <header class="header">  
         <div class="arriba">
             <div class="idioma">
                 <span class="mexico" id="mexico"><img src="/assets/mxmexicoflag_111665.png" alt="" class="mxm-img" title="Español"></span>
@@ -32,11 +32,11 @@
                 <span class="material-symbols-outlined shopping">
                    <a href="#"> shopping_cart </a>
                     </span>
-                <a href="#">    
+                <a href="#" id="padrea">    
                     <span class="material-symbols-outlined person">
                     person
                     </span>
-                    <span class="log">iniciar sesión</span>    
+                    <span class="log" id="log"> iniciar sesión</span>    
                 </a>
             </div>
         </div>
@@ -59,7 +59,7 @@
         </div>
     </header>
     <main class="main">
-      
+
         <div class="contactos-con">
             <div class="todos-cont" id="a">
                 <a href="https://api.whatsapp.com/send?phone=5214641030201" class="e" target="_blank">
@@ -85,30 +85,12 @@
               <span>contactos</span>
             </div>
         </div>
-        <div></div>
-        <article class="articlemain">
-            <section class="section-form-inicio">
-                <h2> Iniciar Sesión</h2>
-                <form action="index.php" method="post" class="Formulario">
-                    <?php
-                        if(isset($error)){
-                            echo $error;
-                            //FlipFlop2& Andante345&
-                        }
-                    ?>
-                    <label for="mailcreated">Correo</label>
-                    <input type="text" id="mailcreated" class="texto" name="mail">
-                    <label for="passcreated">Contraseña</label>
-                    <input type="password" id="passcreated" class="texto" name="pass">
-                    <input type="submit" value="Iniciar sesión" class="boton">
-                    <span>¿Se te olvidó la contraseña?,recuperala aquí</span>
-                    <span class="boton2"><a href="/Principal_es/NuevaContra/index.html">Cambiar contraseña</a></span>
-                    <span>¿No tienes cuenta con nosotros? cree una aquí</span>
-                    <span class="boton1"><a href="/Principal_es/Inicio/Crear/index.html" class="link"><span></span>Crear cuenta</a></span>
-                </form>
-            </section>
+        <article class="article">
 
+           
         </article>
+        
+        
     </main>
     <footer class="footer">
         <div class="contactos-footer">

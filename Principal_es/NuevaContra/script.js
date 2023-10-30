@@ -68,43 +68,8 @@ const EncontrarDato=(Arreglo)=>{
         }
     }
 }
-const Datos=(Array)=>{
-    for(DATA in Array){
-        if(Array.hasOwnProperty(DATA)){
-            let value= Array[DATA];
-            return value;
-        }
-    }
-}
-const PutDataUser=(JSONPHP)=>{
-    let texto=Datos(JSONPHP);
-    let name=document.getElementById('Name-1');
-    let lastname=document.getElementById('last-Name-1');
-    let phone=document.getElementById('phone-1');
-    
-    let address=document.getElementById('adress-1');
-    let city=document.getElementById('city-1');
-    let state=document.getElementById('state-1');
-    let country=document.getElementById('Country-1');
-    let zip=document.getElementById('ZIP-1');
-    let mail=document.getElementById('Mail-1');
 
-    let section=document.getElementById('section-1');
-    let ArrayObject=[name,lastname,phone,address,city,state,country,zip,mail];
-    delete texto.id;
-    delete texto.Contraseña;
-    let arrayObjectOf=Object.values(texto);
-    const fragment=document.createDocumentFragment();
-    for(const index in ArrayObject){
-        const spanNew=document.createElement('SPAN');
-        spanNew.classList.add("data","A");
-        spanNew.textContent=arrayObjectOf[index];
-        ArrayObject[index].append[spanNew];
-        fragment.appendChild(spanNew);
-        section.children[index].appendChild(fragment);
-    }
 
-}
 const ManejarJSON=(JSONPHP)=>{
     let texto=EncontrarDato(JSONPHP);
     let ini=document.getElementById('log');
@@ -114,4 +79,5 @@ const ManejarJSON=(JSONPHP)=>{
     ini2.textContent=texto;
     ini.append(ini2)
     link.replaceChild(ini2,ini);
+
 }
