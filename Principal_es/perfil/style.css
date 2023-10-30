@@ -155,7 +155,7 @@ body{
         cursor: pointer;
     }
 }
-.section1{
+.article{
     width: 60%;
     margin: 10% auto 10% auto ;
     
@@ -194,7 +194,14 @@ body{
     font-size: 1.5em;
    
 }
-
+.titulo{
+    font-size:clamp(1.0em,3vw,2.5em);
+    color:#5c0707
+}
+.data, .A{
+    font-size: clamp(0.6em,3vw,1.5em );
+    color:#610000
+}
 .todos-cont{
     
     visibility: hidden;
