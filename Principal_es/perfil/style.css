@@ -118,6 +118,16 @@ body{
         color: #591d1a;
         transition: .6s;
     }
+    .logout a:hover{
+        color:#260000;
+        background-color: antiquewhite;
+        transition: .6s;
+    }
+    .password a:hover{
+        color:#6e1615;
+        background-color: antiquewhite;
+        transition: .6s;
+    }
     .btn-contactos:hover{
         background-color: bisque;
         color:#6e1615 ;
@@ -203,7 +213,6 @@ body{
     color:#610000
 }
 .todos-cont{
-    
     visibility: hidden;
     margin-bottom: -100%;
     transition: all 500ms ease-in;
@@ -214,7 +223,32 @@ body{
     margin-top: -200%;
     transition: all 500ms ease-in;
 }/*******/
+.botons{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    justify-content: center;
+    align-items: center;
+    margin-top: 1em;
+}
+.logout a,.password a{
+    text-decoration: none;
+    color: antiquewhite;
+}
+.password a{
+    background-color:#6e1615;
+    border:#260000 solid 3px;
+    border-radius: 14px;
+    padding: 5px;
+    box-shadow: 4px 4px #260000 ;
+}
+.logout a{
+    background-color: #260000;
+    border:#610000 solid 3px;
+    border-radius: 14px;
+    padding: 5px;
+    box-shadow: 4px 4px #260000 ;
 
+}
 /**Pie de página*/
 .footer{
     

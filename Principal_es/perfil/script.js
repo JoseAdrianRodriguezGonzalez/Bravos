@@ -103,19 +103,7 @@ const PutDataUser=(JSONPHP)=>{
         fragment.appendChild(spanNew);
         section.children[index].appendChild(fragment);
     }
-    
-  /*  for(const index in (ArrayObject)){
-        let padre=section.children[index];
-        spanNew.classList.add('Datos','A');
-        spanNew.textContent=arrayObjectOf[index];
-        ArrayObject[index].append(spanNew);
-       // console.log(ArrayObject[index]);
-       // console.log(spanNew.textContent);
-       // console.log(index);
-    // (section.children[index].firstElementChild).replaceChild(spanNew,ArrayObject[index]);
-        padre.replaceChild(spanNew,ArrayObject[index]);
-        console.log(section.children[index].firstElementChild);
-    }*/
+
 }
 const ManejarJSON=(JSONPHP)=>{
     let texto=EncontrarDato(JSONPHP);
@@ -128,16 +116,3 @@ const ManejarJSON=(JSONPHP)=>{
     link.replaceChild(ini2,ini);
 
 }
-/**
- * 
- * 
- *         let texto="<?php echo $nombre?>";
-        let ini=document.getElementById('log');
-        let link=document.getElementById('padrea');
-        const ini2=document.createElement('span');
-        ini2.classList.add('ini2','log');
-        ini2.textContent=texto;
-        ini.append(ini2)
-        link.replaceChild(ini2,ini);
-    </script>
- */
