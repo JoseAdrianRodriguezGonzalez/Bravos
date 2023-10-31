@@ -14,6 +14,7 @@
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon-32x32.png"/>
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon.ico"/>
     <script src="/SrcollReveal/scrollreveal.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Tienda-Bravo's Boots &hats</title>
 
 </head>
@@ -86,14 +87,18 @@
             </div>
         </div>
         <article class="article">
-            <form action="" method="post">
+            <form action="" method="post" class="form1">
+                <label for="Email">Correo</label>
+                <input type="email" id="email"class="text-email"name="Email" placeholder=" Correo" title="Contraseña">
+
                 <label for="New">Nueva contraseña</label>
-                
                 <input type="password" id="New-Password"class="text1"name="New" placeholder="password" title="Contraseña">
                 <label for="New1"><br>Confirme nueva contraseña</label>
                 <input type="password" id="New-Password1"class="text2"name="New1" placeholder="password">
                 <!--reCAPTCHA-->
+                <div class="g-recaptcha" data-sitekey="6Lfo-t8oAAAAAA05ZSzMni9-yeed9wkQFiljHPsj"></div>
                 <input type="submit" value="Cambiar contraseña" class="buttonChange">
+
             </form>
            
         </article>

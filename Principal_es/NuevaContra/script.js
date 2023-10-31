@@ -36,7 +36,22 @@ contactos.addEventListener('click',()=>{
         
     }
 });
+let request2=new XMLHttpRequest();
+request2.open('POST',"Principal_es/NuevaContra/index.php",true);
+request2.onload=function(){
+    if(this.response>=200 &&this.response<400){
+        let parsed_response = JSON.parse(this.response.trim());//Recorta el JSON
+        console.log(parsed_response);//Imprime la respuesta de JSON
+    }else{
+        console.log(this.response);
+    }
+}
+request2.send();
+
 /**uso de ajax para obterne runa varibale y un json  */
+
+
+
 let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php"; //Obtiene el php del cual va a sacar los datos
 let request = new XMLHttpRequest(); //Hace una xmlhttprequest
 
@@ -49,9 +64,12 @@ request.onload = function() {
         console.log(parsed_response);//Imprime la respuesta de JSON
         ManejarJSON(parsed_response);//Realiza el cambio en el DOM con la variable del JSON
         PutDataUser(parsed_response);
+        
     } else {
         // Error
+        console.log(this.status);
         console.log(this.response);//Mnada el codigo de error
+        
     }
 };/*Al marcar el error, se muestra la conexión de error */
 request.onerror = function() {
@@ -81,3 +99,5 @@ const ManejarJSON=(JSONPHP)=>{
     link.replaceChild(ini2,ini);
     link.setAttribute("href","/Principal_es/perfil/index.html");
 }
+//ajax para ver si hay un usuario activo
+

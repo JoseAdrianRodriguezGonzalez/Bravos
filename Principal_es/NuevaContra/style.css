@@ -167,6 +167,10 @@ body{
     border-style: dashed;
     box-shadow: 10px 20px 10px;
 }
+.form1{
+    display:inherit;
+    grid-template-columns: repeat(2,1fr);
+}
 /***/
 /*Boton*/
 .contactos-con{
