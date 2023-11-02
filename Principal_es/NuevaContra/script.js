@@ -35,23 +35,26 @@ contactos.addEventListener('click',()=>{
         a=false;
         
     }
-});
+});/**Verifica si hay un usuario */
 let request2=new XMLHttpRequest();
-request2.open('POST',"Principal_es/NuevaContra/index.php",true);
+request2.open('POST','index.php',true);
 request2.onload=function(){
-    if(this.response>=200 &&this.response<400){
+    if(this.status>=200 &&this.status<400){
         let parsed_response = JSON.parse(this.response.trim());//Recorta el JSON
-        console.log(parsed_response);//Imprime la respuesta de JSON
+        ExistUser(parsed_response);
     }else{
         console.log(this.response);
+
     }
 }
 request2.send();
-
 /**uso de ajax para obterne runa varibale y un json  */
-
-
-
+const ExistUser=(caso)=>{
+    if(caso[0]==true)
+        request.send();
+    else
+        console.log("No existe ese usuario");
+}
 let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php"; //Obtiene el php del cual va a sacar los datos
 let request = new XMLHttpRequest(); //Hace una xmlhttprequest
 
@@ -63,7 +66,7 @@ request.onload = function() {
         let parsed_response = JSON.parse(this.response.trim());//Recorta el JSON
         console.log(parsed_response);//Imprime la respuesta de JSON
         ManejarJSON(parsed_response);//Realiza el cambio en el DOM con la variable del JSON
-        PutDataUser(parsed_response);
+        QuitForm();
         
     } else {
         // Error
@@ -75,7 +78,7 @@ request.onload = function() {
 request.onerror = function() {
     console.log('Connection error!');
 };
-request.send();//Envia la petición
+//Envia la petición
 /**Manejo de los AJAX */
 const EncontrarDato=(Arreglo)=>{
     for(key in Arreglo) {//Hace un arreglo del JSON
@@ -86,8 +89,11 @@ const EncontrarDato=(Arreglo)=>{
         }
     }
 }
-
-
+const QuitForm=()=>{
+    let fomulario=document.getElementById('formulario');
+    formulario.removeChild(fomulario.children[0]);
+    formulario.removeChild(formulario.children[0]);
+}
 const ManejarJSON=(JSONPHP)=>{
     let texto=EncontrarDato(JSONPHP);
     let ini=document.getElementById('log');
@@ -100,4 +106,3 @@ const ManejarJSON=(JSONPHP)=>{
     link.setAttribute("href","/Principal_es/perfil/index.html");
 }
 //ajax para ver si hay un usuario activo
-

@@ -32,7 +32,7 @@
                 <span class="material-symbols-outlined shopping">
                    <a href="#"> shopping_cart </a>
                     </span>
-                <a href="#">    
+                <a href="/Principal_es/Inicio/sesion/index.html">    
                     <span class="material-symbols-outlined person">
                     person
                     </span>
