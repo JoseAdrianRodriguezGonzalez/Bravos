@@ -64,7 +64,7 @@ request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Hay buerna respuesta
         let parsed_response = JSON.parse(this.response.trim());//Recorta el JSON
-        console.log(parsed_response);//Imprime la respuesta de JSON
+       // console.log(parsed_response);//Imprime la respuesta de JSON
         ManejarJSON(parsed_response);//Realiza el cambio en el DOM con la variable del JSON
         QuitForm();
         
@@ -106,3 +106,28 @@ const ManejarJSON=(JSONPHP)=>{
     link.setAttribute("href","/Principal_es/perfil/index.html");
 }
 //ajax para ver si hay un usuario activo
+//Detección de caracteres
+let el2=document.getElementById('New-Password1')
+let el1=document.getElementById('New-Password')
+
+
+const validatePass=()=>{
+    if(el2.value!==el1.value){
+        console.log("No es la misma")
+    }else{
+        console.log("es la misma")
+    }
+}
+const comparePassword=()=>{
+    el2.addEventListener("blur",validatePass)
+    el2.addEventListener("keyup",validatePass)
+    el1.addEventListener("blur",validatePass)
+    el1.addEventListener("keyup",validatePass)
+}
+comparePassword();
+let boton =document.getElementById('Button')
+
+
+boton.addEventListener('submit',(e)=>{
+    e.preventDefault();
+})

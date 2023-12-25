@@ -46,7 +46,7 @@ request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Hay buerna respuesta
         let parsed_response = JSON.parse(this.response.trim());//Recorta el JSON
-        console.log(parsed_response);//Imprime la respuesta de JSON
+       // console.log(parsed_response);//Imprime la respuesta de JSON
         ManejarJSON(parsed_response);//Realiza el cambio en el DOM con la variable del JSON
         PutDataUser(parsed_response);
     } else {
