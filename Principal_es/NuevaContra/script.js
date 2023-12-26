@@ -37,7 +37,7 @@ contactos.addEventListener('click',()=>{
     }
 });/**Verifica si hay un usuario */
 let request2=new XMLHttpRequest();
-request2.open('POST','index.php',true);
+request2.open('POST','datavariable.php',true);
 request2.onload=function(){
     if(this.status>=200 &&this.status<400){
         let parsed_response = JSON.parse(this.response.trim());//Recorta el JSON
@@ -112,22 +112,49 @@ let el1=document.getElementById('New-Password')
 
 
 const validatePass=()=>{
-    if(el2.value!==el1.value){
-        console.log("No es la misma")
+    if(el2.value!==''&&el1.value!==''){
+        if(el2.value!==el1.value){
+            console.log("No es la misma")
+            el2.classList.replace('verde','rojo')
+        }else{
+            console.log("es la misma")
+            el2.classList.add('verde','text2')
+            el2.classList.replace('rojo','verde')
+        }
+    } 
+}
+let email_pass=document.getElementById('email-1')
+const dataComplete=()=>{
+    if(el1.value.length>=8){
+        el1.classList.add('verde','text1')
+        el1.classList.replace('rojo','verde') 
     }else{
-        console.log("es la misma")
+        el1.classList.add('rojo','text1')
+        el1.classList.replace('verde','rojo')
     }
+        
+    if(email_pass.value!==''){
+        email_pass.classList.add('verde','text-email')
+        email_pass.classList.replace('rojo','verde') 
+    }else{
+        email_pass.classList.add('rojo','text-email')
+        email_pass.classList.replace('verde','rojo')
+    }
+        
+    validatePass()
 }
 const comparePassword=()=>{
-    el2.addEventListener("blur",validatePass)
-    el2.addEventListener("keyup",validatePass)
-    el1.addEventListener("blur",validatePass)
-    el1.addEventListener("keyup",validatePass)
+    el2.addEventListener("blur",dataComplete);
+    el2.addEventListener("keyup",dataComplete);
+    el1.addEventListener("blur",dataComplete);
+    el1.addEventListener("keyup",dataComplete);
+    email_pass.addEventListener("blur",dataComplete);
+    email_pass.addEventListener("keyup",dataComplete);
 }
 comparePassword();
 let boton =document.getElementById('Button')
-
-
+/*
 boton.addEventListener('submit',(e)=>{
     e.preventDefault();
-})
+    
+})*/

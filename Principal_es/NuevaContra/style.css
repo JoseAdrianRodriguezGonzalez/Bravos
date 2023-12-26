@@ -155,6 +155,10 @@ body{
         color: #591d1a;
         cursor: pointer;
     }
+    .Cambio-contra span a:hover{
+        color:dark;
+        transition: .6s;
+    }
 }.main{
     display: grid;
     grid-template-rows: repeat(6,1fr);
@@ -163,6 +167,9 @@ body{
 .article{
     display: grid;
     grid-template-columns: repeat(1,1fr);
+    grid-template-areas: "br"
+                         "span"
+                          "form";
     background-color: rgba(255, 228, 196, 0.699);
     border-radius: 50px;
     border-style: dashed;
@@ -171,7 +178,44 @@ body{
     grid-row: 1/6;
     grid-column-start:2 ;
     grid-row-start: 2;
-    gap:1em
+    
+}
+.Cambio-contra{
+    display:inherit;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: " espacio error error error error  ";
+    justify-self: center;
+    background-color:rgb(34, 145, 49);
+    font-size: 1.3em;
+    color: dark;
+}
+.Cambio-contra span{
+    grid-column-start: error;
+    grid-area: error/error;
+}
+.Error{
+    display:inherit;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-areas: " espacio espacio error error error  ";
+    justify-self: center;
+    
+    background-color:rgb(145, 34, 34);
+    font-size: 1.3em;
+    color: white;
+    
+}.Error span{
+    grid-column-start: error;
+    
+}
+.Cambio-contra span a{
+    text-decoration: none;
+    color:white
+}
+
+.Indicacion{
+    display: grid;
+    justify-content: center;
+   font-size: 1.3em;
 }
 .form1{
     
@@ -196,6 +240,19 @@ body{
     align-self: center;
     grid-column-start: input;
     grid-column-end: input;
+}
+.verde{ 
+    transition: 0.5s;
+    background-color: rgba(73, 250, 73, 0.719);
+    border-color: dark ;
+    color:dark
+}
+.rojo{ 
+    transition: 0.5s;
+    background-color: rgba(241, 57, 57, 0.596);
+    
+    border-color: dark;
+    color:dark
 }
 .buttonChange{
     grid-column-start: boton;
