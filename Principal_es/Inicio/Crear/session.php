@@ -12,7 +12,7 @@ function sesion(){
     if(isset($_SESSION['user'])){//pregunta si hay sesión 
         $user->setUser($userSession->getCurrentUser());
         
-         include_once"/xampp/htdocs/bravo/Principal_es/index.php";
+        header("location: ../../index.html");
          }else if(isset($_POST['email']) && isset($_POST['pass'])){//si no fue así, pregunta si se pusieron los datos
             
              $UserForm=$_POST['email'];
@@ -21,7 +21,7 @@ function sesion(){
              if($user->Existe($UserForm,$PassForm)){ 
                  $userSession->setCurrentUser($UserForm);
                  $user->setUser($UserForm);
-                 include_once"/xampp/htdocs/bravo/Principal_es/index.php";
+                 header("location: ../../index.html");
                  
              }
              else{

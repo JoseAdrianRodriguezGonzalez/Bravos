@@ -164,6 +164,22 @@ body{
         color: #591d1a;
         cursor: pointer;
     }
+    .eliminate button:hover{
+        color:#461a01dc;
+        background-color: antiquewhite;
+        transition: .6s;
+        cursor: pointer;
+    }
+    .verdeboton:hover{
+        background-color: antiquewhite;
+        color:rgba(1, 54, 1, 0.918) ;
+        transition: 0.4s;
+    }
+    .botonrojo:hover{
+        color: #5c0707;
+        background-color:antiquewhite;
+        transition:0.4s;
+    }
 }
 .article{
     width: 60%;
@@ -225,12 +241,12 @@ body{
 }/*******/
 .botons{
     display: grid;
-    grid-template-columns: repeat(2,1fr);
+    grid-template-columns: repeat(3,1fr);
     justify-content: center;
     align-items: center;
     margin-top: 1em;
 }
-.logout a,.password a{
+.logout a,.password a,.eliminate button{
     text-decoration: none;
     color: antiquewhite;
 }
@@ -248,6 +264,86 @@ body{
     padding: 5px;
     box-shadow: 4px 4px #260000 ;
 
+}
+.eliminate button{
+    background-color: #461a01dc;
+    border:#330505 solid 3px;
+    border-radius: 14px;
+    padding: 5px;
+    box-shadow: 4px 4px #260000 ;
+}
+.overlay{
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+    visibility: hidden;
+    
+}
+.overlay.active{
+    visibility: visible;
+
+}
+.popup{
+    background-color:rgba(255, 228, 196, 1);
+    display :inherit;
+    grid-template-columns: repeat(2,1fr);
+    grid-template-rows: repeat(2,1fr);
+    grid-template-areas: "title title" 
+                          "botonA botonB";
+    justify-items: center;
+    align-items:center ;
+    border-radius: 10%;
+    border:5px dashed rgb(17, 10, 1);
+    transition: .7s ease all;
+    opacity: 0;
+    transform: scale(.5);
+    
+}
+.popup.active{
+    opacity: 1;
+    transform: scale(1);
+}
+.title{
+    grid-column-start: title;
+    grid-column-end: title;
+}
+.botonrojo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-rows: repeat(3,1fr);
+    border-radius: 60%;
+    background-color:#5c0707;
+    border:5px solid #360404;
+    box-shadow: 6px 7px #140000;
+    text-decoration: none;
+    color:antiquewhite;
+}
+.verdeboton{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(3,1fr);
+    border-radius: 60%;
+    box-shadow: 6px 7px rgba(1, 29, 1, 0.918);
+    background-color:rgba(1, 54, 1, 0.918) ;
+    border:5px solid rgba(0, 26, 0, 0.918) ;
+    text-decoration: none;
+    color:antiquewhite;
+}
+.boton-Si{
+    grid-column-start: botonA; 
+   grid-area:2/3;
+  
+}
+.Boton-No{
+    grid-column-start: botonB;
+    grid-area:2/2;
+    
 }
 /**Pie de página*/
 .footer{

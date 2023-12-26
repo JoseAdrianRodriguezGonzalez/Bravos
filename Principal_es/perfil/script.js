@@ -115,3 +115,16 @@ const ManejarJSON=(JSONPHP)=>{
     ini.append(ini2)
     link.replaceChild(ini2,ini);
 }
+/*****POPUP */
+let boton=document.getElementById('open-popup');
+let over=document.getElementById('over');
+let pop=document.getElementById('popup-alert')
+boton.addEventListener('click',()=>{
+    over.classList.add('active');
+    pop.classList.add('active');
+})
+let boton2=document.getElementById('boton-cerrar-popup');
+boton2.addEventListener('click',()=>{
+    over.classList.remove("active");
+    pop.classList.remove("active");
+})

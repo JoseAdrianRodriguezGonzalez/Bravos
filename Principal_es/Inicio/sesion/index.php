@@ -9,7 +9,7 @@
     //echo"si hay";
     $user->setUser($userSession->getCurrentUser());
     
-    include_once"/xampp/htdocs/bravo/Principal_es/index.php";
+    header('Location:/Principal_es/index.html');
     }else if(isset($_POST['mail']) && isset($_POST['pass'])){//si no fue así, pregunta si se pusieron los datos
         
         $UserForm=mysqli_real_escape_string(conectar(),$_POST['mail']);
@@ -19,7 +19,7 @@
             $userSession->setCurrentUser($UserForm);
             $user->setUser($UserForm);
             
-            header('Location:/Principal_es/index.html');
+            header("location: ../../index.html");
         }
         else{
            $error ="Correo o contraseña son incorrecto";

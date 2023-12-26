@@ -126,12 +126,27 @@
                     <div class="password">
                         <a href="/Principal_es/NuevaContra/index.html">Cambiar contraseña</a>
                     </div>
+                    <div class="eliminate">
+                        <button id="open-popup" >Eliminar cuenta</button>
+                    </div>
                 </div>
-
             </section>
         </article>
-        
-        
+        <div class="overlay" id="over">
+            <div class="popup" id="popup-alert">
+                <h1 class="title">¿Estás seguro de eliminar tu cuenta?</h1>
+                    <a href="/Principal_es/perfil/Eliminar/delete.php" id="boton-eliminar-popup" class="verdeboton">
+                        <div class="boton-Si">
+                            Si
+                        </div>
+                    </a>
+                    <a href="#" id="boton-cerrar-popup"class="botonrojo">
+                        <div class="Boton-No">
+                            No
+                        </div>
+                    </a>
+            </div>
+        </div>
     </main>
     <footer class="footer">
         <div class="contactos-footer">

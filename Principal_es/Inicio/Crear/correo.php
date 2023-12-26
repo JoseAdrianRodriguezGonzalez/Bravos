@@ -52,8 +52,8 @@ function enviar_email(){
             <body>
             <h1> Has creado una cuenta</h1>
             <p>Este es un correo de verificacion, si este no eres tu, dale click en el siguiente enlace,
-            <a href="google.com">Eliminar cuenta</a>
             sino, ignore el correo</p>
+            <a href="http://localhost:3000/Principal_es/perfil/Eliminar/delete.php">Eliminar cuenta</a>
             <img src="cid:sombrero">
             </body>
             </html>';
