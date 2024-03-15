@@ -7,6 +7,10 @@ body{
     background-image: url(/assets/337689622_606819744687795_4463476993346729155_n.webp);
     background-repeat: no-repeat;
     background-size: cover;
+    height:100vh;
+}
+html{
+    height:100vh;
 }
 /*Cabecera*/
 .header{
@@ -175,14 +179,14 @@ body{
     gap:10px;
     padding: 5px;
     grid-template-rows: repeat(2,1fr);
-    
+    align-self: center;
 }
 .crearform{
    
     display: grid;
     grid-template-columns: repeat(4,1fr);
     gap: 10px 10px;
-    justify-items: center;
+    align-self: center;
     padding: 10px;
     color: #661b19;
 }
@@ -198,6 +202,7 @@ body{
     
     background-color: rgba(255, 228, 196, 0.87);
     display: grid;
+    justify-content: center;
 
 }
 .section-form-crear h2{
@@ -269,6 +274,7 @@ body{
     grid-template-columns: repeat(3,1fr);
     height: 20vh;
     position: absolute;
+    bottom:0;
 }
 .contactos-footer{
     border-right: white solid 2px;

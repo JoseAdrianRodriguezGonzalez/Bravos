@@ -7,6 +7,10 @@ body{
     background-image: url(/assets/337648911_748493476899811_8730901925126939753_n.webp);
     background-repeat: no-repeat;
     background-size:cover;
+    height:100vh;
+}
+html{
+    height:100vh
 }
 /*Cabecera*/
 .header{
@@ -328,6 +332,7 @@ body{
     
     height: 20vh;
     position: absolute;
+    bottom:0;
     
 }
 .contactos-footer{

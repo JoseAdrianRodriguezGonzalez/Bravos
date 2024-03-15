@@ -13,7 +13,7 @@
     $country=$_POST['paises'];
     $postal=$_POST['postal'];
     $newmail=strtolower($mail);
-    $preguntar="SELECT *FROM `usuarios` WHERE  `Contraseña`='$pass'  AND `Correo`='$newmail'";
+    $preguntar="SELECT *FROM `usuarios` WHERE   `Correo`='$newmail'";
     $queryConsulta= mysqli_query(conectar(),$preguntar);
     $rowCount=mysqli_num_rows($queryConsulta);
     if($rowCount>0){
