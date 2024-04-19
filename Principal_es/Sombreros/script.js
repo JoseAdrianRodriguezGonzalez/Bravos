@@ -10,6 +10,7 @@ let grupo=document.getElementById('gr');
 let animacion=document.getElementById('animacion');
 let arreglo=[].slice.call(grupo.children);
 let Mai=document.getElementById('Mai');
+const database=require("mysql")
 console.log(arreglo instanceof Array);
 window.sr=ScrollReveal();
 
@@ -110,4 +111,22 @@ const ManejarJSON=(JSONPHP)=>{
     ini.append(ini2)
     link.replaceChild(ini2,ini);
     link.setAttribute("href","/Principal_es/perfil/index.html");
+}
+
+const db= database.createConnection({
+    host:"localhost",
+    user:"root",
+    password:'',
+    database:"bravos"
+})
+const dataHats = async ()=>{
+    try{
+        sql="SELECT *FROM usuarios WHERE Co"
+        db.query(sql, datacol, (err, results, fields) => {
+            if (err) {
+                return console.error(err.message);
+            }
+            console.log("User ID:" + results.insertId);
+        });
+    }
 }
