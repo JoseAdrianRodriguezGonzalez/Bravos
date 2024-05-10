@@ -4,17 +4,12 @@ let correo=document.getElementById('correo');
 let cosas=document.getElementById('a');
 let contactos=document.getElementById('contactos-btn');
 
-let izquierda=document.getElementById('izq');
-let derecha=document.getElementById('der');
-let grupo=document.getElementById('gr');
-let animacion=document.getElementById('animacion');
-let arreglo=[].slice.call(grupo.children);
+
 let Mai=document.getElementById('Mai');
-const database=require("mysql")
-console.log(arreglo instanceof Array);
+//const express =require("express");
+
 window.sr=ScrollReveal();
 
-animacion.load();
 let a=false;
 mx.addEventListener('click',()=>{
     location.href="/Principal_es/index.html";
@@ -41,35 +36,6 @@ contactos.addEventListener('click',()=>{
         
     }
 });
-
-derecha.addEventListener('click',()=>{
-    ultimo=arreglo.pop();
-
-    arreglo.unshift(ultimo);
-    ultimo.classList.add('animacion');
-
-    setTimeout(() => {
-        grupo.insertAdjacentElement('afterbegin',ultimo);        
-        if(ultimo.classList.contains('animacion')){
-            ultimo.classList.remove('animacion');
-             
-        }
-    }, 500);
-
-})
-izquierda.addEventListener('click',()=>{
-    primero=arreglo.shift();
-    arreglo.push(primero);
-    primero.classList.add('animacion');
-    setTimeout(() => {
-
-        grupo.insertAdjacentElement('afterbegin',primero);        
-        if(primero.classList.contains('animacion')){
-            primero.classList.remove('animacion');
-           
-        }
-    }, 500);
-})
 /***Manejo de JSON */
 let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php";
 let request = new XMLHttpRequest();
@@ -89,7 +55,7 @@ request.onload = function() {
 };
 request.onerror = function() {
     console.log('Connection error!');
-};
+};//
 request.send();
 /**Manejo de los AJAX */
 const EncontrarDato=(Arreglo)=>{
@@ -112,21 +78,24 @@ const ManejarJSON=(JSONPHP)=>{
     link.replaceChild(ini2,ini);
     link.setAttribute("href","/Principal_es/perfil/index.html");
 }
+//manejo deJSON de sombreros
+let database="./database.php";
+let requestdata = new XMLHttpRequest();
+requestdata.open('POST', database, true);
 
-const db= database.createConnection({
-    host:"localhost",
-    user:"root",
-    password:'',
-    database:"bravos"
-})
-const dataHats = async ()=>{
-    try{
-        sql="SELECT *FROM usuarios WHERE Co"
-        db.query(sql, datacol, (err, results, fields) => {
-            if (err) {
-                return console.error(err.message);
-            }
-            console.log("User ID:" + results.insertId);
-        });
+requestdata.onload = function() {
+    if (this.status >= 200 && this.status < 400) {
+        // Success
+        let parsed_response = JSON.parse(this.response.trim());
+        console.log(parsed_response);
+        ManejarJSON(parsed_response);
+    } else {
+        // Error
+        console.log(this.response);
     }
-}
+};
+
+requestdata.onerror = function() {
+    console.log('Connection error!');
+};
+requestdata.send();
