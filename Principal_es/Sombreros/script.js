@@ -87,8 +87,8 @@ requestdata.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Success
         let parsed_response = JSON.parse(this.response.trim());
+        JSONDATA(parsed_response);
         console.log(parsed_response);
-        ManejarJSON(parsed_response);
     } else {
         // Error
         console.log(this.response);
@@ -99,3 +99,32 @@ requestdata.onerror = function() {
     console.log('Connection error!');
 };
 requestdata.send();
+/**Create the function which takes out the json */
+const JSONDATA =(JSONHats)=>{
+    const container =document.getElementById('hats');
+    JSONHats.forEach(hat => {
+        const createDiv= document.createElement('div');
+        createDiv.classList.add(`container`)
+        for(let key in hat){
+            if(key==='Tipo de sombrero'){
+                const createSpan=document.createElement('span')
+                createSpan.textContent=`${hat[key]} ${hat['Color']} ${hat['nombre']} calidad  ${hat['Calidad']}`
+                createDiv.appendChild(createSpan);
+            }if(key==='Precio'){
+                const createSpan=document.createElement('span')
+                createSpan.textContent=`Precio: $${hat[key]}`
+                createDiv.appendChild(createSpan);
+            }
+            if(key=='link'){
+                const img=document.createElement('img');
+                img.src=hat.link;
+                createDiv.appendChild(img);
+            }
+        }
+        container.appendChild(createDiv);
+        
+    });
+}
+/**Each value found on the json will be put it in the website and modificate the DOM and also create html elements*/
+/*create styles for elements that has been created*/
+ 

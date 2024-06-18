@@ -209,6 +209,22 @@ Seccí+on de cabecera
     transition: all 500ms ease-in;
 }
 
+/*main*/
+
+.main-part{
+    display:grid;
+    grid-template-rows: 1fr ,1fr;
+}
+main{
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+}
+.title-store{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color:#661b19
+}
 /*Pie de página*/
 .footer{
     
@@ -217,9 +233,31 @@ Seccí+on de cabecera
     display: grid;
     grid-template-columns: repeat(3,1fr);
     height: 20vh;
-    position: absolute;
-    bottom:0;
 }
+.hats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.5vw;
+}
+.container{
+    width:auto;
+    display: grid;
+    padding: 0.5vw;
+    border:.5em solid gray;
+    justify-content: center;
+    grid-template-rows:repeat(2,1fr) ;
+}
+.container img{
+    
+    justify-content:end;
+    grid-row-start: 1;
+    width: 10vw;
+}
+.container span{
+    display: inline-block;
+    height: 1.2vh;
+}
+
 /*Privacidad*/
 .AP{
     color: bisque;
