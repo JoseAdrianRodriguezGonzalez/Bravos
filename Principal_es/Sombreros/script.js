@@ -165,7 +165,7 @@ const JSONDATATEXANAS =(JSONHats)=>{
         createDiv.classList.add('container', `container-${i}`)
         const link=document.createElement('a')
         link.classList.add('link')
-        link.setAttribute('href',`./container${i}`)
+        link.setAttribute('href','/assets')
         createDiv.appendChild(link);
         for(let key in hat){
             if(key==='Tipo de sombrero'){
