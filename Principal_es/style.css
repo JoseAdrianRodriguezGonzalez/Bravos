@@ -165,6 +165,11 @@ Seccí+on de cabecera
         color: #591d1a;
         cursor: pointer;
     }
+    .imagex:hover{
+        cursor: pointer;
+        background-color:rgba(0,0,0,.3);
+        transition: .6s;
+    }
 }/*Botón de contactos*/
 .contactos-con{
     position: fixed;
@@ -205,6 +210,40 @@ Seccí+on de cabecera
     visibility: visible;
     margin-top: -200%;
     transition: all 500ms ease-in;
+}
+/*Carro*/
+.carrito_1{
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: grid;
+    align-items: center;
+    justify-content:end;
+    visibility: hidden;
+}
+.imagexlogo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.imagex{
+    grid-column: 3;
+}
+.carrito_1.active{
+    visibility: visible;
+}
+.layer{
+    background-color:rgba(255, 228, 196, 1);
+    display :inherit;
+
+    justify-items: center;
+    align-items:center ;
+}
+.cantidad{
+    
 }
 /*Slider*/
 .slider{
