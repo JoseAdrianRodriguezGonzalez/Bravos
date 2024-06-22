@@ -162,15 +162,15 @@ const JSONDATATEXANAS =(JSONHats)=>{
     JSONHats.forEach(hat => {
         i++;
         const createDiv= document.createElement('div');
-        createDiv.classList.add('container', `container-${i}`)
+        createDiv.classList.add('container', `container-${i}`);
         const link=document.createElement('a')
-        link.classList.add('link')
-        link.setAttribute('href','/assets')
+        link.classList.add('link');
+        link.setAttribute('href','as');
         createDiv.appendChild(link);
         for(let key in hat){
             if(key==='Tipo de sombrero'){
-                const createSpan=document.createElement('span')
-                createSpan.textContent=`Texana ${hat[key]} ${hat['Color']} calidad ${hat['Calidad']}`
+                const createSpan=document.createElement('span');
+                createSpan.textContent=`Texana ${hat[key]} ${hat['Color']} calidad ${hat['Calidad']}`;
                 link.appendChild(createSpan);
             }if(key==='Precio'){
                 const createSpan=document.createElement('span')
