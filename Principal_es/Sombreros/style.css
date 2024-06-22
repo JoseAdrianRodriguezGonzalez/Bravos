@@ -167,6 +167,12 @@ Seccí+on de cabecera
         color: #591d1a;
         cursor: pointer;
     }
+    .container:hover{
+    
+        transition: .7s ease all;
+        transform: scale(1.2);
+        
+    }
 }
 .contactos-con{
     position: fixed;
@@ -218,6 +224,7 @@ Seccí+on de cabecera
 main{
     display:grid;
     grid-template-rows: repeat(1,1fr);
+    margin: 1vw
 }
 .title-store{
     display: grid;
@@ -225,7 +232,43 @@ main{
     align-items: center;
     color:#661b19
 }
-/*Pie de página*/
+.hats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.5vw;
+    }
+.link{
+    display:grid;
+    color:#260000;
+    grid-template-rows:1fr 0.375fr 0.375fr ;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+ .container{
+    width:auto;
+    display: grid;
+    padding: 0.5vw;
+    background-color: rgba(255, 228, 196, 0.432);
+    border:2.5px solid #260000;
+    box-shadow: 10px 10px rgba(0,0,0,0.3);
+
+    padding:10px;
+    font-size: 1.5vw;
+}
+.container img{
+    
+    justify-content:end;
+    grid-row-start: 1;
+    width: 10vw;
+    }
+.container span{
+    display: inline-block;
+    height: 1.2vh;
+
+    }
+    
+    /*Pie de página*/
 .footer{
     
     width: 100%;
@@ -234,34 +277,10 @@ main{
     grid-template-columns: repeat(3,1fr);
     height: 20vh;
 }
-.hats{
-    display: grid;
-    grid-template-columns: repeat(3,1fr);
-    gap:1.5vw;
-}
-.container{
-    width:auto;
-    display: grid;
-    padding: 0.5vw;
-    border:.5em solid gray;
-    justify-content: center;
-    grid-template-rows:repeat(2,1fr) ;
-}
-.container img{
-    
-    justify-content:end;
-    grid-row-start: 1;
-    width: 10vw;
-}
-.container span{
-    display: inline-block;
-    height: 1.2vh;
-}
-
 /*Privacidad*/
 .AP{
     color: bisque;
-}
+    }
 .AP a{
     text-decoration: none;
     color: inherit;

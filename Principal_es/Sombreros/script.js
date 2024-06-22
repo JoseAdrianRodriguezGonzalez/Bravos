@@ -63,6 +63,7 @@ const EncontrarDato=(Arreglo)=>{
         if(Arreglo.hasOwnProperty(key)) {
             let value = Arreglo[key];
             //do something with value;
+            console.log("Nombre");
             return value["Nombre"]
         }
     }
@@ -102,29 +103,88 @@ requestdata.send();
 /**Create the function which takes out the json */
 const JSONDATA =(JSONHats)=>{
     const container =document.getElementById('hats');
+    let i=0;
     JSONHats.forEach(hat => {
+        i++
         const createDiv= document.createElement('div');
-        createDiv.classList.add(`container`)
+        createDiv.classList.add('container', `container-${i}`)
+        const link=document.createElement('a')
+        link.classList.add('link')
+        link.setAttribute('href','#')
+        createDiv.appendChild(link);
         for(let key in hat){
             if(key==='Tipo de sombrero'){
                 const createSpan=document.createElement('span')
-                createSpan.textContent=`${hat[key]} ${hat['Color']} ${hat['nombre']} calidad  ${hat['Calidad']}`
-                createDiv.appendChild(createSpan);
+                createSpan.textContent=`${hat[key]} ${hat['Color']} ${hat['nombre']} calidad ${hat['Calidad']}`
+                link.appendChild(createSpan);
             }if(key==='Precio'){
                 const createSpan=document.createElement('span')
                 createSpan.textContent=`Precio: $${hat[key]}`
-                createDiv.appendChild(createSpan);
+                link.appendChild(createSpan);
             }
             if(key=='link'){
                 const img=document.createElement('img');
                 img.src=hat.link;
-                createDiv.appendChild(img);
+                link.appendChild(img);
             }
         }
+
         container.appendChild(createDiv);
-        
+
     });
 }
 /**Each value found on the json will be put it in the website and modificate the DOM and also create html elements*/
 /*create styles for elements that has been created*/
- 
+ /**Texanas */
+let Texanas="./texanas.php";
+let requestdataT = new XMLHttpRequest();
+requestdataT.open('POST', Texanas, true);
+
+requestdataT.onload = function() {
+    if (this.status >= 200 && this.status < 400) {
+        // Success
+        let parsed_response = JSON.parse(this.response.trim());
+        JSONDATATEXANAS(parsed_response);
+        console.log(parsed_response);
+    } else {
+        // Error
+        console.log(this.response);
+    }
+};
+
+requestdataT.onerror = function() {
+    console.log('Connection error!');
+};
+requestdataT.send();
+const JSONDATATEXANAS =(JSONHats)=>{
+    const container =document.getElementById('hats');
+    let i=65;
+    JSONHats.forEach(hat => {
+        i++;
+        const createDiv= document.createElement('div');
+        createDiv.classList.add('container', `container-${i}`)
+        const link=document.createElement('a')
+        link.classList.add('link')
+        link.setAttribute('href','#')
+        createDiv.appendChild(link);
+        for(let key in hat){
+            if(key==='Tipo de sombrero'){
+                const createSpan=document.createElement('span')
+                createSpan.textContent=`Texana ${hat[key]} ${hat['Color']} calidad ${hat['Calidad']}`
+                link.appendChild(createSpan);
+            }if(key==='Precio'){
+                const createSpan=document.createElement('span')
+                createSpan.textContent=`Precio: $${hat[key]}`
+                link.appendChild(createSpan);
+            }
+            if(key=='link'){
+                const img=document.createElement('img');
+                img.src=hat.link;
+                link.appendChild(img);
+            }
+        }
+
+        container.appendChild(createDiv);
+
+    })
+}
