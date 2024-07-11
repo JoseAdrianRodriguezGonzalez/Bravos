@@ -1,0 +1,307 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0;
+    position: relative;
+}
+html{
+    height: 100vh;
+}
+/*
+Seccí+on de cabecera
+*/
+.header{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+/*Prte de arriba de la cabecera*/
+.arriba{
+    display: inherit;
+    flex-direction: row;
+    
+    justify-content: center;
+    align-items: center;
+    background-color: #6e1615;
+}
+/*Imagenes de mexico*/
+.mxm-img{
+    display: inline-block;
+    width: 40px;
+    
+}/*Imagen de usa*/
+.usa-img{
+    display: inline-block;
+    width: 40px;
+
+}
+/**SEcciones de paises*/
+.mexico{
+    display: inline-block;
+    padding-top: 9px;
+}
+.usa{
+    display: inline-block;
+   
+}
+/*Div de idioma*/
+.idioma{
+    display: inherit;
+    flex-grow: 1;
+    justify-content: center;
+}/*Div del logo*/
+ .logo{
+    flex-shrink: 8;
+    padding: 15px;
+   
+    flex-grow: 2;
+    display: flex;
+    justify-content: center;
+    width: 200px;
+}/*Imagen del logo*/
+.logo-img{
+    
+    display: inline-block;
+    width: 150px;    
+}/*dIV DE COMPRA*/
+.compra{
+    
+    flex-grow: 1;
+    display: inherit;
+    align-items: center;
+    justify-items:center;
+}/*Logos*/
+.material-symbols-outlined{
+    font-size: 40px;
+    flex-grow: 5;
+    justify-items: center;
+    display: inherit;
+}/*Carro*/
+.shopping{
+    
+    justify-content: center;
+}/*Persona*/
+.person{
+     
+    flex-shrink: 3;
+}/*Iniciar sesión */
+.log{
+    color: bisque;
+}/*Sección de abajo*/
+.abajo{
+    background-color: #591d1a;
+    display:inherit;
+    
+    
+} /*Enlaces de compra */
+.compra>a,.shopping>a{
+    text-decoration: none;
+    color:bisque;
+}
+.compra>a{
+    display:inherit;
+    flex-direction: column;
+
+}/*Enlaces de la sección de abajo*/
+.abajo a{
+    display: inherit;
+    justify-content: center;
+    text-decoration: none;
+    color: bisque;
+    flex-grow: 2;
+}
+@media(hover:hover){
+    .abajo a:hover{
+        background-color: bisque;
+        color: #591d1a;
+        transition: .6s;
+    }
+    .btn-contactos:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .whatsapp:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .instagram:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .correo:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+        cursor: pointer;
+    }
+    .telefono:hover{
+        background-color: bisque;
+        color:#6e1615 ;
+        border-color: bisque;
+        transition: .6s;
+    }
+    .derecha:hover{
+        color: bisque;
+        transition: .6s;
+    }
+    .izquierda:hover{
+        color: bisque;
+        transition: .6s;
+    }
+    .text1:hover{
+        color: aliceblue;
+        transition: .6s;
+     }
+     .iw:hover, .ii:hover, .im:hover, .ip:hover{
+        color: #591d1a;
+        cursor: pointer;
+    }
+}
+.container-hat{
+    width:200px;
+    background-color: #661b19;
+}
+.contactos-con{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    z-index: 100;
+    width: 50px;
+}
+
+.btn-contactos,.whatsapp,.instagram,.correo,.telefono{
+    
+    height: 10vh;
+    background-color: #6e1615;
+    border: 2px solid #661b19;
+    border-radius: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: bisque;    
+    margin: 0;
+}
+.btn-contactos{
+    font-size:  .8em;;
+}
+.whatsapp,.instagram,.correo,.telefono{
+    font-size: 1.5em;
+   
+}
+
+.todos-cont{
+    
+    visibility: hidden;
+    margin-bottom: -100%;
+    transition: all 500ms ease-in;
+}
+.abierto{
+    display: inline-block;
+    visibility: visible;
+    margin-top: -200%;
+    transition: all 500ms ease-in;
+}
+
+/*main*/
+
+.main-part{
+    display:grid;
+    grid-template-rows: 1fr ,1fr;
+}
+main{
+    display:grid;
+    grid-template-rows: repeat(1,1fr);
+    margin: 1vw
+}
+.title-store{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    color:#661b19
+}
+.hats{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap:1.5vw;
+    }
+.link{
+    display:grid;
+    color:#260000;
+    grid-template-rows:1fr 0.375fr 0.375fr ;
+    justify-items: center;
+    align-items: center;
+    text-decoration: none;
+}
+ .container{
+    width:auto;
+    display: grid;
+    padding: 0.5vw;
+    background-color: rgba(255, 228, 196, 0.432);
+    border:2.5px solid #260000;
+    box-shadow: 10px 10px rgba(0,0,0,0.3);
+
+    padding:10px;
+    font-size: 1.5vw;
+}
+.container img{
+    
+    justify-content:end;
+    grid-row-start: 1;
+    width: 10vw;
+    }
+.container span{
+    display: inline-block;
+    height: 1.2vh;
+
+    }
+    
+    /*Pie de página*/
+.footer{
+    
+    width: 100%;
+    background-color: #260000;
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    height: 20vh;
+}
+/*Privacidad*/
+.AP{
+    color: bisque;
+    }
+.AP a{
+    text-decoration: none;
+    color: inherit;
+}/*Sección de la derecha*/
+.derechaf{
+    border-right: white solid 2px;
+    display: grid;
+    grid-template-columns: repeat(1,1fr);
+    align-items: center;
+    justify-items: center;
+}
+.iw, .ii, .im, .ip,.direccion{
+    color: bisque;
+}/*Contactos*/
+.contactos-footer{
+    border-right: white solid 2px;
+    display: grid;
+    grid-template-columns: auto;
+    justify-items: center;
+    align-items: center;
+}
+.direccion{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+}

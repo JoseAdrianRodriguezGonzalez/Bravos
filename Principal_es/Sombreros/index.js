@@ -16,7 +16,7 @@ const db= database.createConnection({
     database:"bravos"
 })
 let data=excel.readFile('./Sombreros.xlsx');
-let worksheet =data.Sheets[data.SheetNames[2]];
+let worksheet =data.Sheets[data.SheetNames[1]];
 let range=excel.utils.decode_range(worksheet["!ref"])
 for (let row = range.s.r + 1; row <= range.e.r; row++) {
     let datacol = [];
@@ -25,9 +25,9 @@ for (let row = range.s.r + 1; row <= range.e.r; row++) {
         datacol.push(cell ? cell.v : -1);
     }
     console.log(datacol);
-  //  let sql = "INSERT INTO `tejidos` (`Tipo de sombrero`, `Color`, `Nombre`, `Medidas`, `Calidad`, `Precio`, `Unidad`,`link`) VALUES (?, ?, ?, ?, ?, ?, ?,?)";
- // let sql = "INSERT INTO `botín` (`Material`, `Forma`, `Color`,`Unidad`,`link`) VALUES (?, ?, ?, ?, ?)";
-    let sql ="INSERT INTO `texana` (`Tipo de sombrero`, `Color`, `Tamaño`, `Calidad`, `Precio`, `Unidad`,`link`) VALUES (?, ?, ?, ?, ?, ?,?)"
+    let sql = "INSERT INTO `tejidos` (`id`,`Tipo de sombrero`, `Color`, `Nombre`, `Medidas`, `Calidad`, `Precio`, `Unidad`,`link`) VALUES (?,?, ?, ?, ?, ?, ?, ?,?)";
+  //let sql = "INSERT INTO `botín` (`id`,`Material`, `Forma`, `Color`,`Unidad`,`link`) VALUES (?, ?, ?, ?, ?)";
+   // let sql ="INSERT INTO `texana` (`id`,`Tipo de sombrero`, `Color`, `Tamaño`, `Calidad`, `Precio`, `Unidad`,`link`) VALUES (?,?, ?, ?, ?, ?, ?,?)"
   db.query(sql, datacol, (err, results, fields) => {
         if (err) {
             return console.error(err.message);

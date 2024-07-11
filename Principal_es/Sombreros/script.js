@@ -110,7 +110,7 @@ const JSONDATA =(JSONHats)=>{
         createDiv.classList.add('container', `container-${i}`)
         const link=document.createElement('a')
         link.classList.add('link')
-        link.setAttribute('href','/Principal_es/Sombreros/rutas/route.js')
+        link.setAttribute('href',`/Principal_es/Sombreros/rutas/plantilla.php?id=${i}`)
         createDiv.appendChild(link);
         for(let key in hat){
             if(key==='Tipo de sombrero'){
@@ -128,7 +128,7 @@ const JSONDATA =(JSONHats)=>{
                 link.appendChild(img);
             }
         }
-
+//FlipFop3 contra
         container.appendChild(createDiv);
 
     });
@@ -165,7 +165,7 @@ const JSONDATATEXANAS =(JSONHats)=>{
         createDiv.classList.add('container', `container-${i}`);
         const link=document.createElement('a')
         link.classList.add('link');
-        link.setAttribute('href','/Principal_es/Sombreros/rutas/route.js')
+        link.setAttribute('href',`/Principal_es/Sombreros/rutas/plantilla.php?id=z${i}`)
         createDiv.appendChild(link);
         for(let key in hat){
             if(key==='Tipo de sombrero'){
