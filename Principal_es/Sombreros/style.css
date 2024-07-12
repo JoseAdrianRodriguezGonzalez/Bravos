@@ -253,7 +253,7 @@ main{
     grid-template-columns: repeat(3,1fr);
     gap:1.5vw;
 
-    }
+    }/*Seccion*/
 .select{
     display:grid;
     grid-template-columns: repeat(2,1fr);
@@ -282,6 +282,7 @@ main{
     font-size: 1.5rem;
     color:whitesmoke;
 }
+/*Seccion*/
 .link{
     display:grid;
     color:#260000;
