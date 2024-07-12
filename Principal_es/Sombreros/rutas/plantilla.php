@@ -19,6 +19,7 @@
 </head>
 <?php
 $item=$_GET['id'];
+$tip=$_GET['tip'];
 require "./../../Inicio/Crear/connect.php";
 function peticion($instruccion){
     $query1=mysqli_query(conectar(),$instruccion); //envia peticion
@@ -30,7 +31,13 @@ function peticion($instruccion){
     return json_encode($json);
 }
 $tejidos="SELECT * FROM `tejidos` WHERE `id`=$item"; //selecciona el usuario, 
-$json=peticion($tejidos);
+if($tip=="tex"){
+    $texanas="SELECT * FROM `texana` WHERE `id`=$item";
+    $json=peticion($texanas);
+} 
+else{
+    $json=peticion($tejidos);
+}
 ?>
 <body>
     <!--Cabecera-->

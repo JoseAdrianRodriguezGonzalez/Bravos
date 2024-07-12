@@ -173,6 +173,21 @@ Seccí+on de cabecera
         transform: scale(1.2);
         
     }
+    .texanas span:hover{
+        color: #591d1a;
+        cursor: pointer;
+        transition: .7s;
+    }
+    .tejidos span:hover{
+        color:wheat;
+        cursor: pointer;
+        transition: .7s;
+    }
+    .texanas:hover, .tejidos:hover{
+        opacity: 0.6;
+        transition: .7s;
+        cursor: pointer;
+    }
 }
 .contactos-con{
     position: fixed;
@@ -236,7 +251,37 @@ main{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:1.5vw;
+
     }
+.select{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    gap:1.5vw;
+    width: 30vw;
+    height: 55vh;
+    justify-self: center;
+}
+.texanas, .tejidos{
+    align-self: center;
+    justify-self: stretch;
+    position: relative;
+    display: grid;
+    background-color: #260000;
+    height:35vh;
+}
+.texanas img, .tejidos img{
+    height: inherit;
+    width: inherit;
+    opacity: 0.5;
+}
+.texanas span, .tejidos span{
+
+    justify-self: center;
+    position: absolute;
+    align-self: center;
+    font-size: 1.5rem;
+    color:whitesmoke;
+}
 .link{
     display:grid;
     color:#260000;

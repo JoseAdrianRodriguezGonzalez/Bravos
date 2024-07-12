@@ -79,112 +79,22 @@ const ManejarJSON=(JSONPHP)=>{
     link.replaceChild(ini2,ini);
     link.setAttribute("href","/Principal_es/perfil/index.html");
 }
-//manejo deJSON de sombreros
-let database="./database.php";
-let requestdata = new XMLHttpRequest();
-requestdata.open('POST', database, true);
+let tej=document.getElementById('tejidos');
+let texa=document.getElementById('texanas');
+tej.addEventListener('click',()=>{
+    location.href="./tejidos/tejidos.html";
+})
+texa.addEventListener('click',()=>{
+    location.href="./texanas/texanas.html";
+})
 
-requestdata.onload = function() {
-    if (this.status >= 200 && this.status < 400) {
-        // Success
-        let parsed_response = JSON.parse(this.response.trim());
-        JSONDATA(parsed_response);
-        console.log(parsed_response);
-    } else {
-        // Error
-        console.log(this.response);
-    }
-};
 
-requestdata.onerror = function() {
-    console.log('Connection error!');
-};
-requestdata.send();
-/**Create the function which takes out the json */
-const JSONDATA =(JSONHats)=>{
-    const container =document.getElementById('hats');
-    let i=0;
-    JSONHats.forEach(hat => {
-        i++
-        const createDiv= document.createElement('div');
-        createDiv.classList.add('container', `container-${i}`)
-        const link=document.createElement('a')
-        link.classList.add('link')
-        link.setAttribute('href',`/Principal_es/Sombreros/rutas/plantilla.php?id=${i}`)
-        createDiv.appendChild(link);
-        for(let key in hat){
-            if(key==='Tipo de sombrero'){
-                const createSpan=document.createElement('span')
-                createSpan.textContent=`${hat[key]} ${hat['Color']} ${hat['nombre']} calidad ${hat['Calidad']}`
-                link.appendChild(createSpan);
-            }if(key==='Precio'){
-                const createSpan=document.createElement('span')
-                createSpan.textContent=`Precio: $${hat[key]}`
-                link.appendChild(createSpan);
-            }
-            if(key=='link'){
-                const img=document.createElement('img');
-                img.src=hat.link;
-                link.appendChild(img);
-            }
-        }
-//FlipFop3 contra
-        container.appendChild(createDiv);
 
-    });
-}
+
+
 /**Each value found on the json will be put it in the website and modificate the DOM and also create html elements*/
 /*create styles for elements that has been created*/
  /**Texanas */
-let Texanas="./texanas.php";
-let requestdataT = new XMLHttpRequest();
-requestdataT.open('POST', Texanas, true);
 
-requestdataT.onload = function() {
-    if (this.status >= 200 && this.status < 400) {
-        // Success
-        let parsed_response = JSON.parse(this.response.trim());
-        JSONDATATEXANAS(parsed_response);
-        console.log(parsed_response);
-    } else {
-        // Error
-        console.log(this.response);
-    }
-};
 
-requestdataT.onerror = function() {
-    console.log('Connection error!');
-};
-requestdataT.send();
-const JSONDATATEXANAS =(JSONHats)=>{
-    const container =document.getElementById('hats');
-    let i=65;
-    JSONHats.forEach(hat => {
-        i++;
-        const createDiv= document.createElement('div');
-        createDiv.classList.add('container', `container-${i}`);
-        const link=document.createElement('a')
-        link.classList.add('link');
-        link.setAttribute('href',`/Principal_es/Sombreros/rutas/plantilla.php?id=z${i}`)
-        createDiv.appendChild(link);
-        for(let key in hat){
-            if(key==='Tipo de sombrero'){
-                const createSpan=document.createElement('span');
-                createSpan.textContent=`Texana ${hat[key]} ${hat['Color']} calidad ${hat['Calidad']}`;
-                link.appendChild(createSpan);
-            }if(key==='Precio'){
-                const createSpan=document.createElement('span')
-                createSpan.textContent=`Precio: $${hat[key]}`
-                link.appendChild(createSpan);
-            }
-            if(key=='link'){
-                const img=document.createElement('img');
-                img.src=hat.link;
-                link.appendChild(img);
-            }
-        }
-
-        container.appendChild(createDiv);
-
-    })
-}
+///Escoger sombrero
