@@ -252,7 +252,6 @@ main{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap:1.5vw;
-
     }/*Seccion*/
 .select{
     display:grid;
@@ -264,7 +263,6 @@ main{
 }
 .texanas, .tejidos{
     align-self: center;
-    
     display: grid;
     background-color: #260000;
     height:35vh;
@@ -275,7 +273,6 @@ main{
     opacity: 0.5;
 }
 .texanas span, .tejidos span{
-
     justify-self: center;
     position: absolute;
     align-self: center;

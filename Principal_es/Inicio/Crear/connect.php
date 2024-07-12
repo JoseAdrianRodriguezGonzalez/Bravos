@@ -1,8 +1,8 @@
 <?php
     function conectar(){
         $server='localhost';
-        $user='root';
-        $pass='';
+        $user='bravo';
+        $pass='Bravoshats23456%';
         $dbname='bravos';
         $conexion= new mysqli($server,$user,$pass,$dbname);
         if($conexion -> connect_error){
