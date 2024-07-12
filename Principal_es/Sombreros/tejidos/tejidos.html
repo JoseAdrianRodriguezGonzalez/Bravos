@@ -12,7 +12,7 @@
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon-16x16.png"/>
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon-32x32.png"/>
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon.ico"/>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../style.css">
     
     <script src="/SrcollReveal/scrollreveal.js"></script>
     <title>Tienda-Bravo's Boots &hats</title>
@@ -43,7 +43,7 @@
             </div>
         </div>
         <div class="abajo">
-            <a href="#">
+            <a href="/Principal_es/Sombreros/index.html">
                 <div class="sombreros">
                     SOMBREROS
                 </div>
@@ -63,17 +63,17 @@
     <!--main-->
     <main>
         <section class="main-part">
-            <h1 class="title-store">Sombreros</h1>
-                <div class="select">
-                    <div class="tejidos" id="tejidos">
-                        <img src="/assets/sombreros/100x_durango_3x3_ivory.webp" alt="">
-                        <span>TEJIDOS</span>
-                    </div>
-                    <div class="texanas" id="texanas">
-                        <img src="/assets/sombreros/grizzly_texana_winter_white.webp" alt="">
-                        <span>TEXANAS</span>
-                    </div>
+            <h1 class="title-store">Tejidos</h1>
+            <!--<div class="select">
+                <div class="tejidos" id="tejidos">
+                    <img src="/assets/sombreros/100x_durango_3x3_ivory.webp" alt="">
+                    <span>TEJIDOS</span>
                 </div>
+                <div class="texanas" id="texanas">
+                    <img src="/assets/sombreros/grizzly_texana_winter_white.webp" alt="">
+                    <span>TEXANAS</span>
+                </div>
+            </div>-->
             <div class="hats" id="hats">
                 
             </div>
@@ -140,6 +140,64 @@
             <span>Tampico #704 Colonia Bellavista Salamanca Guanajuato</span>
         </div>
     </footer>
-    <script src="script.js"></script>
+    <script src="../script.js"></script>
+    <script>
+        
+//manejo deJSON de sombreros
+let database="../database.php";
+let requestdata = new XMLHttpRequest();
+requestdata.open('POST', database, true);
+
+requestdata.onload = function() {
+    if (this.status >= 200 && this.status < 400) {
+        // Success
+        let parsed_response = JSON.parse(this.response.trim());
+        JSONDATA(parsed_response);
+        console.log(parsed_response);
+    } else {
+        // Error
+        console.log(this.response);
+    }
+};
+
+requestdata.onerror = function() {
+    console.log('Connection error!');
+};
+
+/**Create the function which takes out the json */
+const JSONDATA =(JSONHats)=>{
+    const container =document.getElementById('hats');
+    let i=0;
+    JSONHats.forEach(hat => {
+        i++
+        const createDiv= document.createElement('div');
+        createDiv.classList.add('container', `container-${i}`)
+        const link=document.createElement('a')
+        link.classList.add('link')
+        link.setAttribute('href',`/Principal_es/Sombreros/rutas/plantilla.php?id=${i}`)
+        createDiv.appendChild(link);
+        for(let key in hat){
+            if(key==='Tipo de sombrero'){
+                const createSpan=document.createElement('span')
+                createSpan.textContent=`${hat[key]} ${hat['Color']} ${hat['nombre']} calidad ${hat['Calidad']}`
+                link.appendChild(createSpan);
+            }if(key==='Precio'){
+                const createSpan=document.createElement('span')
+                createSpan.textContent=`Precio: $${hat[key]}`
+                link.appendChild(createSpan);
+            }
+            if(key=='link'){
+                const img=document.createElement('img');
+                img.src="../"+hat.link;
+                link.appendChild(img);
+            }
+        }
+//FlipFop3 contra
+        container.appendChild(createDiv);
+
+    });
+}
+requestdata.send();
+    </script>
 </body>
 </html>
