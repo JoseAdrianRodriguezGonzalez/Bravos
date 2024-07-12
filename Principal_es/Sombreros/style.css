@@ -235,11 +235,12 @@ Seccí+on de cabecera
 .main-part{
     display:grid;
     grid-template-rows: 1fr ,1fr;
+    width: 100%;
 }
 main{
     display:grid;
     grid-template-rows: repeat(1,1fr);
-    margin: 1vw
+    margin: 1vw;
 }
 .title-store{
     display: grid;
@@ -257,21 +258,21 @@ main{
     display:grid;
     grid-template-columns: repeat(2,1fr);
     gap:1.5vw;
-    width: 30vw;
+    width: 30%;
     height: 55vh;
     justify-self: center;
 }
 .texanas, .tejidos{
     align-self: center;
-    justify-self: stretch;
-    position: relative;
+    
     display: grid;
     background-color: #260000;
     height:35vh;
+
 }
 .texanas img, .tejidos img{
-    height: inherit;
-    width: inherit;
+    width: 100%;
+    height: 100%;
     opacity: 0.5;
 }
 .texanas span, .tejidos span{
