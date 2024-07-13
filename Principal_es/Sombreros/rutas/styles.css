@@ -183,8 +183,8 @@ Seccí+on de cabecera
 .btn-contactos,.whatsapp,.instagram,.correo,.telefono{
     
     height: 10vh;
-    background-color:  rgba(0, 0, 0, 0.842);;
-    border: 2px solid  rgba(0, 0, 0, 0.842);;
+    background-color:  rgba(0, 0, 0, 0.842);
+    border: 2px solid  rgba(0, 0, 0, 0.842);
     border-radius: 100%;
     display: flex;
     justify-content: center;

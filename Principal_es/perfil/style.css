@@ -352,7 +352,7 @@ body{
 .footer{
     
     width: 100%;
-    background-color: #260000;
+    background-color: black;
     display: grid;
     grid-template-columns: repeat(3,1fr);
     
