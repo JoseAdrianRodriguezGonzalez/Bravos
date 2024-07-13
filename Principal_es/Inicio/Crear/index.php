@@ -1,6 +1,6 @@
 <?php
-echo "asasad";
     require "session.php";
+    echo "asasad";
   //  require "connect.php";
     require "correo.php";
     $name=$_POST['nombre'];
