@@ -1,7 +1,6 @@
 <?php
     require "./../Inicio/sesion/sesion.php";//Llama a la libreria de sesio
     require "../Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
-    echo "a";
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
     $user = new user(); //Crea un usuario
     $user->setUser($userSession->getCurrentUser()); //Crea una sesión
@@ -14,6 +13,5 @@
     while($row = mysqli_fetch_assoc($query1)){
             $json[] = $row;
     }
-    echo "si llego";
     //    echo json_encode($json);
 ?>
