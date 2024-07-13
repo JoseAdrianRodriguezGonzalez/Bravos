@@ -8,7 +8,7 @@
     if(isset($_SESSION['user'])){//pregunta si hay sesión 
         echo"si hay";
         $user->setUser($userSession->getCurrentUser());
-    
+        echo $user->getNombre();
          //header("location: ../../index.html");
     }else if(isset($_POST['mail']) && isset($_POST['pass'])){//si no fue así, pregunta si se pusieron los datos
         
