@@ -1,4 +1,5 @@
 <?php
+    require "../Inicio/Crear/connect.php";
     require "../Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
     echo "a";
     
