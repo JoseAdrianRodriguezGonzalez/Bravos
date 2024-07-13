@@ -1,4 +1,6 @@
 <?php
+    error_reporting(E_ALL);
+    ini_set('display_errors', 1);
     require "inicio.php";
     require "sesion.php";
     //require "C:/xampp/htdocs/bravo/Principal_es/Inicio/Crear/connect.php";
