@@ -23,7 +23,7 @@ body{
     
     justify-content: center;
     align-items: center;
-    background-color: #6e1615;
+    background-color: black;
 }
 .mxm-img{
     display: inline-block;
@@ -88,7 +88,7 @@ body{
     color: bisque;
 }
 .abajo{
-    background-color: #591d1a;
+    background-color: rgba(0, 0, 0, 0.842);
     display:inherit;
     
     
