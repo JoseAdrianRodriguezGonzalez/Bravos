@@ -18,7 +18,7 @@
     $rowCount=mysqli_num_rows($queryConsulta);
     if($rowCount>0){
         $error="ya existe esa cuenta";
-        include_once"/xampp/htdocs/bravo/Principal_es/Inicio/Crear/crear.php";
+        include_once"./Principal_es/Inicio/Crear/crear.php";
     }
     else{
         $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `Telefono`, `Contraseña`, `Direccion`, `Ciudad`, `Estado`, `Pais`, `Codigo postal`, `id`, `Correo`) VALUES('$name','$lastname','$phone','$pass','$addres','$city','$state','$country','$postal',NULL,'$newmail')";
