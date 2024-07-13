@@ -14,5 +14,6 @@
     while($row = mysqli_fetch_assoc($query1)){
             $json[] = $row;
     }
-    echo json_encode($json);
+    echo "si llego";
+    //    echo json_encode($json);
 ?>
