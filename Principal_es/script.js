@@ -80,7 +80,7 @@ request.onload = function() {
         // Success
         let parsed_response = JSON.parse(this.response.trim());
         if(Object.keys(parsed_response).length==0){console.log(2)}
-        console.log(parsed_response.length());
+        console.log(typeof(parsed_response));
         ManejarJSON(parsed_response);
     } else {
         // Error
