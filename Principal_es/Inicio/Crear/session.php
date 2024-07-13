@@ -1,4 +1,5 @@
 <?php
+echo "as";
     require "./Principal_es/Inicio/sesion/inicio.php";
     require "./Principal_es/Inicio/sesion/sesion.php";
 
