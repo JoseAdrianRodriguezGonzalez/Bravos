@@ -1,5 +1,5 @@
 <?php
-    echo "a";
+    
     require(__DIR__."../Crear/connect.php");
     echo "b";
    //Clase usuario
