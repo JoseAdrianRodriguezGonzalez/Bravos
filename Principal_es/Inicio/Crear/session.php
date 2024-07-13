@@ -1,6 +1,6 @@
 <?php
-echo "as";
     require "./Principal_es/Inicio/sesion/inicio.php";
+    echo "as";
     require "./Principal_es/Inicio/sesion/sesion.php";
 
     //$userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
