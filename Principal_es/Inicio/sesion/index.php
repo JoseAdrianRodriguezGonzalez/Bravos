@@ -6,7 +6,7 @@
     $user = new user(); //Se crea un objeto nuevo del tipo usuario
 
     if(isset($_SESSION['user'])){//pregunta si hay sesión 
-    //echo"si hay";
+        echo"si hay";
         $user->setUser($userSession->getCurrentUser());
     
          //header("location: ../../index.html");
