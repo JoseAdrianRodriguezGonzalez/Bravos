@@ -65,7 +65,7 @@ else{
             </div>
         </div>
         <div class="abajo">
-            <a href="#">
+            <a href="/Principal_es/Sombreros/index.html">
                 <div class="sombreros">
                     SOMBREROS
                 </div>
@@ -161,15 +161,23 @@ else{
     img.classList.add('Hat-img');
     img.setAttribute('src',`./.${data[0]['link']}`)
     divimg.appendChild(img)
-    const section1=document.createElement('section1');
+    const section1=document.createElement('section');
     section1.classList.add('section1');
     createDiv.appendChild(section1);
     const title1=document.createElement('h1');
     title1.textContent=`${data[0]["Tipo de sombrero"]}`+ ` ${data[0]["nombre"]}`+ ` ${data[0]["Color"]}`+ ` ${data[0]["Calidad"]} `
     section1.appendChild(title1)
     const span1=document.createElement('span');
-    span1.textContent= ` ${data[0]["Medidas"]} `
+    const span3=document.createElement('span');
+    const span4=document.createElement('span');
+    let adata=`${data[0]["Medidas"]}`
+    adata=adata.split("  ")
+    span1.textContent= adata[0];
+    span3.textContent= adata[2];
+    span4.textContent='Medidas';
+    section1.appendChild(span4);
     section1.appendChild(span1);
+    section1.appendChild(span3);
     const span2=document.createElement('span');
     span2.textContent= `$ ${data[0]["Precio"]} `
     section1.appendChild(span2);

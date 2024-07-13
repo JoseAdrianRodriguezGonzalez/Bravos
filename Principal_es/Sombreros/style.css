@@ -257,15 +257,15 @@ main{
     display:grid;
     grid-template-columns: repeat(2,1fr);
     gap:1.5vw;
-    width: 30%;
-    height: 55vh;
+    width: 55%;
+    height: 80vh;
     justify-self: center;
 }
 .texanas, .tejidos{
     align-self: center;
     display: grid;
     background-color: #260000;
-    height:35vh;
+    height:65vh;
 }
 .texanas img, .tejidos img{
     width: 100%;
@@ -276,7 +276,7 @@ main{
     justify-self: center;
     position: absolute;
     align-self: center;
-    font-size: 1.5rem;
+    font-size: 4.5vw;
     color:whitesmoke;
 }
 /*Seccion*/
@@ -292,6 +292,7 @@ main{
     width:auto;
     display: grid;
     padding: 0.5vw;
+    
     background-color: rgba(255, 228, 196, 0.432);
     border:2.5px solid #260000;
     box-shadow: 10px 10px rgba(0,0,0,0.3);
@@ -299,6 +300,7 @@ main{
     padding:10px;
     font-size: 1.5vw;
 }
+
 .container img{
     
     justify-content:end;
