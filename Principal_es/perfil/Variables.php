@@ -1,4 +1,5 @@
 <?php
+echo "a";
     require "../Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
     require "../Inicio/sesion/sesion.php";//Llama a la libreria de sesio
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
@@ -14,4 +15,4 @@
             $json[] = $row;
     }
     echo json_encode($json);
-    ?>
+?>
