@@ -1,7 +1,6 @@
 <?php
     require "inicio.php";
     require "sesion.php";
-    echo "si";
     //require "C:/xampp/htdocs/bravo/Principal_es/Inicio/Crear/connect.php";
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
     $user = new user(); //Se crea un objeto nuevo del tipo usuario
