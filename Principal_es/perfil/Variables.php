@@ -1,6 +1,6 @@
 <?php
     require "./../Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
-    echo "defe";
+    
     require "./../Inicio/sesion/sesion.php";//Llama a la libreria de sesio
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
     $user = new user(); //Crea un usuario
