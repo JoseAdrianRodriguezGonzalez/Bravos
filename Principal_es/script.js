@@ -79,8 +79,10 @@ request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Success
         let parsed_response = JSON.parse(this.response.trim());
-        console.log(typeof(parsed_response));
-        ManejarJSON(parsed_response);
+        console.log(Object.keys(parsed_response).length);
+        if(Object.keys(parsed_response).length){
+            ManejarJSON(parsed_response);
+        }
     } else {
         // Error
         console.log(this.response);
