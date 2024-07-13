@@ -1,6 +1,7 @@
 <?php
-require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
-    require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/sesion.php";//Llama a la libreria de sesio
+    require "../Inicio/sesion/inicio.php";
+//Llama a la "libreria" de inicio
+    require "../Inicio/sesion/sesion.php";//Llama a la libreria de sesio
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
     $user = new user(); //Crea un usuario
     $user->setUser($userSession->getCurrentUser()); //Crea una sesión
