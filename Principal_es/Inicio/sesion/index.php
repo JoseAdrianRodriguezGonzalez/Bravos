@@ -1,5 +1,5 @@
 <?php
-    echo "a";
+    echo "apkookokok";
     require "inicio.php";
     require "sesion.php";
     //require "C:/xampp/htdocs/bravo/Principal_es/Inicio/Crear/connect.php";
