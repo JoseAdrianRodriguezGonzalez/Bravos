@@ -3,9 +3,10 @@ use PHPMailer\PHPMailer\PHPMailer;
 use PHPMailer\PHPMailer\Exception;
 use PHPMailer\PHPMailer\SMTP;
 
-require './Principal_es/Inicio/Crear/PHPMailer/Exception.php';
-require './Principal_es/Inicio/Crear/PHPMailer/PHPMailer.php';
-require './Principal_es/Inicio/Crear/PHPMailer/SMTP.php';
+require './PHPMailer/Exception.php';
+require './PHPMailer/PHPMailer.php';
+require './PHPMailer/SMTP.php';
+
 
 
 function enviar_email(){
