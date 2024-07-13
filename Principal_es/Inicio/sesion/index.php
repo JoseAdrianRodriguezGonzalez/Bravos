@@ -1,6 +1,4 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
     require "inicio.php";
     require "sesion.php";
     //require "C:/xampp/htdocs/bravo/Principal_es/Inicio/Crear/connect.php";
@@ -9,9 +7,9 @@
 
     if(isset($_SESSION['user'])){//pregunta si hay sesión 
     //echo"si hay";
-    $user->setUser($userSession->getCurrentUser());
+        $user->setUser($userSession->getCurrentUser());
     
-    //header("location: ../../index.html");
+         //header("location: ../../index.html");
     }else if(isset($_POST['mail']) && isset($_POST['pass'])){//si no fue así, pregunta si se pusieron los datos
         
         $UserForm=mysqli_real_escape_string(conectar(),$_POST['mail']);
