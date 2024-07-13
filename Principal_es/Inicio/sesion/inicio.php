@@ -1,5 +1,5 @@
 <?php
-    require("Principal_es/Inicio/Crear/connect.php");
+    require("/Principal_es/Inicio/Crear/connect.php");
     echo "b";
    //Clase usuario
     class user {
