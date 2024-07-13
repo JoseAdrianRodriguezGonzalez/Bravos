@@ -1,4 +1,5 @@
 <?php
+echo "asasad";
     require "session.php";
   //  require "connect.php";
     require "correo.php";
