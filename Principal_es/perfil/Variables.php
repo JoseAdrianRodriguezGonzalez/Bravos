@@ -1,6 +1,5 @@
 <?php
-    error_reporting(E_ALL);
-    ini_set('display_errors', 1);
+
     require "./../Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
     
     require "./../Inicio/sesion/sesion.php";//Llama a la libreria de sesio
