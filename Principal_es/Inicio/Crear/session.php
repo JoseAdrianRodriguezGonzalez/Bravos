@@ -8,7 +8,6 @@ function sesion(){
     
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
     $user = new user(); //Se crea un objeto nuevo del tipo usuario
-    
     if(isset($_SESSION['user'])){//pregunta si hay sesión 
         $user->setUser($userSession->getCurrentUser());
         
