@@ -245,10 +245,13 @@ body{
     justify-content: center;
     align-items: center;
     margin-top: 1em;
+    
 }
+
 .logout a,.password a,.eliminate button{
     text-decoration: none;
     color: antiquewhite;
+    font-size: 1.4vw;
 }
 .password a{
     background-color:#6e1615;
