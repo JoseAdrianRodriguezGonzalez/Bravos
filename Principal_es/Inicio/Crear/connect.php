@@ -1,9 +1,9 @@
 <?php
     function conectar(){
         $server='localhost';
-        $user='bravo';
+        $user='u350875428_bravo';
         $pass='Bravoshats23456%';
-        $dbname='bravos';
+        $dbname='u350875428_bravos';
         $conexion= new mysqli($server,$user,$pass,$dbname);
         if($conexion -> connect_error){
             die("Conexion fallidad".$conexion->connect_error);
