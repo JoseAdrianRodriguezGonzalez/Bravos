@@ -1,6 +1,6 @@
 <?php
-require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
-require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/sesion.php";//Llama a la libreria de sesion
+require "../Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
+require "../Inicio/sesion/sesion.php";//Llama a la libreria de sesion
 $userSession=new SesionUsser();
 $user =new user();
 function confirm($user,$userSession){
