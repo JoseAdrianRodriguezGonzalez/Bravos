@@ -78,7 +78,6 @@ request.open('POST', './perfil/Variables.php', true);
 request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Success
-        
         let parsed_response = JSON.parse(this.response.trim());
         if(parsed_response.length()==0){console.log(2)}
         console.log(parsed_response.length());
