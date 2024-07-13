@@ -1,7 +1,7 @@
 <?php
     require "./../Inicio/sesion/sesion.php";//Llama a la libreria de sesio
-    echo "a";
     require "../Inicio/sesion/inicio.php";//Llama a la "libreria" de inicio
+    echo "a";
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
     $user = new user(); //Crea un usuario
     $user->setUser($userSession->getCurrentUser()); //Crea una sesión
