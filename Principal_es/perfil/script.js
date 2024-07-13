@@ -37,10 +37,10 @@ contactos.addEventListener('click',()=>{
     }
 });
 /**uso de ajax para obterne runa varibale y un json  */
-let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php"; //Obtiene el php del cual va a sacar los datos
+let url = "/perfil/index.php"; //Obtiene el php del cual va a sacar los datos
 let request = new XMLHttpRequest(); //Hace una xmlhttprequest
 
-request.open('POST', '/Principal_es/perfil/Variables.php', true);//Abre la peticion
+request.open('POST', 'Variables.php', true);//Abre la peticion
 /*Carga la petición */
 request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
