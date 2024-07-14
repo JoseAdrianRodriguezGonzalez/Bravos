@@ -118,7 +118,7 @@
                             //captcha
                             $ip=$_SERVER['REMOTE_ADDR'];
                             $captcha=$_POST['g-recaptcha-response'];
-                            $secretkey="6Lfe_Q8qAAAAANJjcraolFePsk3ukrcQPmE5TO1Q";
+                            $secretkey="6Lfe_Q8qAAAAAPTc-HR3mRD5Bwaj5R2RQjw2gIDy";
                             $respuesta =file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
                             $atributos=json_decode($respuesta,TRUE);
                             if(!$atributos['success']){
@@ -206,7 +206,7 @@
                 <label for="New1">Confirme nueva contraseña</label>
                 <input type="password" id="New-Password1"class="text2"name="New1" placeholder="password">
                 <!--reCAPTCHA-->
-                <div class="g-recaptcha" data-sitekey="6Lfo-t8oAAAAAA05ZSzMni9-yeed9wkQFiljHPsj"></div>
+                <div class="g-recaptcha" data-sitekey="6Lfe_Q8qAAAAANJjcraolFePsk3ukrcQPmE5TO1Q"></div>
                 <input type="submit" value="Cambiar contraseña" class="buttonChange" id="Button" name='submit-button'>
 
             </form>
