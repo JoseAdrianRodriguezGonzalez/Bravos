@@ -118,7 +118,7 @@
                             //captcha
                             $ip=$_SERVER['REMOTE_ADDR'];
                             $captcha=$_POST['g-recaptcha-response'];
-                            $secretkey="6Lfe_Q8qAAAAAPTc-HR3mRD5Bwaj5R2RQjw2gIDy";
+                            $secretkey="6Lfe_Q8qAAAAANJjcraolFePsk3ukrcQPmE5TO1Q";
                             $respuesta =file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
                             $atributos=json_decode($respuesta,TRUE);
                             if(!$atributos['success']){
