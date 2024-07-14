@@ -298,7 +298,7 @@ main{
     box-shadow: 10px 10px rgba(0,0,0,0.3);
 
     padding:10px;
-    font-size: 1.5vw;
+    font-size: 1.7vw;
 }
 
 .container img{
@@ -351,4 +351,22 @@ main{
     display: grid;
     justify-content: center;
     align-items: center;
+}
+
+@media screen and (max-width:800px) {
+    .hats{
+        display: grid;
+        grid-template-columns: repeat(1,1fr);
+        justify-self: center;
+    }
+    .link{
+        grid-template-rows:1fr 0.5fr 0.5fr ;
+        
+    }
+    .container{
+        font-size: 5.5vw;
+    }
+    .container img{
+        width:30vw;
+    }
 }
