@@ -158,7 +158,7 @@ Seccí+on de cabecera
         transition: .6s;
     }
     .text1:hover{
-        color: aliceblue;
+        color: rgba(245, 245, 245, 0.623);
         transition: .6s;
      }
      .iw:hover, .ii:hover, .im:hover, .ip:hover{
@@ -300,8 +300,8 @@ Seccí+on de cabecera
     justify-self: center;
     position: absolute;
     align-self: center;
-    font-size: 1.5rem;
-    color:black;
+    font-size: 4vw;
+    color:whitesmoke;
    
     
     

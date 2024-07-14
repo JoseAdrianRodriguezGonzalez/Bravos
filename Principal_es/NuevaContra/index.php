@@ -17,9 +17,11 @@
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Tienda-Bravo's Boots &hats</title>
     <?php
-   require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/inicio.php";
-   require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/sesion.php";
-   $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
+     //require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/inicio.php";
+     require "../Inicio/sesion/inicio.php";
+    //  require "/xampp/htdocs/bravo/Principal_es/Inicio/sesion/sesion.php";
+    require "../Inicio/sesion/sesion.php";
+    $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
              $user = new user(); //Se crea un objeto nuevo del tipo usuario
              $sesionHay;/**************Lo envía a javascript */
              function confirm($user,$userSession){
@@ -116,7 +118,7 @@
                             //captcha
                             $ip=$_SERVER['REMOTE_ADDR'];
                             $captcha=$_POST['g-recaptcha-response'];
-                            $secretkey="6Lfo-t8oAAAAAAIHqmq7X0WsHwJKFJaUI8ifOTov";
+                            $secretkey="6Lfe_Q8qAAAAAPTc-HR3mRD5Bwaj5R2RQjw2gIDy";
                             $respuesta =file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
                             $atributos=json_decode($respuesta,TRUE);
                             if(!$atributos['success']){
@@ -176,7 +178,7 @@
                                                 //UPDATE usuarios SET `Nombre`="Jose Adrian" WHERE `Nombre`="Alberto"
                                                 $insercion="UPDATE `usuarios` SET `Contraseña`=md5('$FirstPass') WHERE `Correo`='$email'";
                                                 $querySend1=mysqli_query(conectar(),$insercion);
-                                                echo '<div class="Cambio-contra">'.'<span>'."Se cambio exitosamente la contraseña,".'<a href="http://localhost:3000/Principal_es/Inicio/sesion/index.html">'."inicie sesión".'</a>' .'</span>' .'</div>';
+                                                echo '<div class="Cambio-contra">'.'<span>'."Se cambio exitosamente la contraseña,".'<a href="/Principal_es/Inicio/sesion/index.html">'."inicie sesión".'</a>' .'</span>' .'</div>';
                                             }
                                         }else{
                                             $error_pass2[]= "No es la misma";
