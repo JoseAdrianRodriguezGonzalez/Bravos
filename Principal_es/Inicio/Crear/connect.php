@@ -6,7 +6,6 @@
     function conectar($server,$user,$pass,$dbname){  
         echo $user;
         $conexion= mysqli_connect($server,$user,$pass,$dbname);
-        echo "si";
         
         if($conexion -> connect_error){
             echo "no";
