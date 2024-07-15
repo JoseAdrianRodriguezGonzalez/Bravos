@@ -1,3 +1,4 @@
 .vercel
 .Sombreros.xlsx
+.env
 node_modules/*.
