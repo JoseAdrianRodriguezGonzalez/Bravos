@@ -5,7 +5,7 @@
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
     
     
-    echo $_SERVER['servidor'];
+    echo $_ENV['servidor'];
     echo"si";
     function peticion($instruccion){
     $query1=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$instruccion); //envia peticion
