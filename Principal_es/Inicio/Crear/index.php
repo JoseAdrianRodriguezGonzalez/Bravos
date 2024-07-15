@@ -3,9 +3,7 @@
   //  require "connect.php";
     require "correo.php";
     
-    require dirname(__DIR__,3)."/vendor/autoload.php";
-    $dotenv=Dotenv\Dotenv::createImmutable(dirname(__DIR__,3));
-    $dotenv->load();
+    
     $name=$_POST['nombre'];
     $lastname=$_POST['Apellido'];
     $phone=$_POST['Telefono'];
@@ -18,7 +16,7 @@
     $postal=$_POST['postal'];
     $newmail=strtolower($mail);
     $preguntar="SELECT *FROM `usuarios` WHERE   `Correo`='$newmail'";
-    $queryConsulta= mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$preguntar);
+    $queryConsulta= mysqli_query(conectar(),$preguntar);
     $rowCount=mysqli_num_rows($queryConsulta);
     if($rowCount>0){
         $error="ya existe esa cuenta";
@@ -26,7 +24,7 @@
     }
     else{
         $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `Telefono`, `Contraseña`, `Direccion`, `Ciudad`, `Estado`, `Pais`, `Codigo postal`, `id`, `Correo`) VALUES('$name','$lastname','$phone','$pass','$addres','$city','$state','$country','$postal',NULL,'$newmail')";
-        $query=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$insertar);
+        $query=mysqli_query(conectar(),$insertar);
         if($query){
             sesion();
             enviar_email();
