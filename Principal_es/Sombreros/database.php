@@ -3,9 +3,9 @@
     require __DIR__."/../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
-    echo $_ENV['db_pass'];
+    
     function peticion($instruccion){
-            $query1=mysqli_query(conectar(getenv('server'),getenv('db_user'),getenv('db_pass'),getenv('db_name')),$instruccion); //envia peticion
+            $query1=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$instruccion); //envia peticion
             echo "si";
     
     $json = array();
