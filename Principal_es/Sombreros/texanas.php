@@ -1,10 +1,7 @@
 <?php
     require "./../Inicio/Crear/connect.php";
-    require '../../vendor/autoload.php';
-    $dotenv=Dotenv\Dotenv::createImmutable('../../../');
-    $dotenv->load();
     function peticion($instruccion){
-    $query1=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$instruccion); //envia peticion
+    $query1=mysqli_query(conectar(),$instruccion); //envia peticion
     
     $json = array();
     while($row = mysqli_fetch_assoc($query1)){

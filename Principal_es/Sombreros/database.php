@@ -6,7 +6,7 @@
     
     function peticion($instruccion){
 
-        $query1=mysqli_query(conectar(getenv('server'),getenv('db_user'),getenv('db_pass'),getenv('db_name')),$instruccion); //envia peticion
+        $query1=mysqli_query(conectar(),$instruccion); //envia peticion
             
     
     $json = array();
