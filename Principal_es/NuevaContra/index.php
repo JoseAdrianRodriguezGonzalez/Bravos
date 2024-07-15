@@ -110,6 +110,9 @@
         <article class="article" id="art">
             <span class="Indicacion">coloque una contraseña de 8 cáracteres</span>
             <?php
+             require __DIR__."/../../vendor/DotEnv.php";
+             use DevCoder\DotEnv;
+             (new DotEnv(__DIR__ . '/../../../.env'))->load();
              $correo=$user->getCorreo();
              /*******En esta sección, confirma si hay un usuario o no */
                 /***************Seccion al iniciar sesion *****/
@@ -118,7 +121,7 @@
                             //captcha
                             $ip=$_SERVER['REMOTE_ADDR'];
                             $captcha=$_POST['g-recaptcha-response'];
-                            $secretkey="6LfL_g8qAAAAAC0NG0Po9DNzbwRrTEVCFrSPLltl";
+                            $secretkey=$_ENV['secretkey-cap'];
                             $respuesta =file_get_contents("https://www.google.com/recaptcha/api/siteverify?secret=$secretkey&response=$captcha&remoteip=$ip");
                             $atributos=json_decode($respuesta,TRUE);
                             if(!$atributos['success']){
