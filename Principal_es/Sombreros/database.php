@@ -3,7 +3,7 @@
     require __DIR__."/../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
-    echo $_ENV['server'];
+    echo getenv('server');
     function peticion($instruccion){
             $server=$_ENV['server'];
             $user=$_ENV['db_user'];
