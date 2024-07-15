@@ -1,5 +1,5 @@
 <?php
-    echo "a";
+    
     require './../../vendor/autoload.php';
     require "./../Inicio/Crear/connect.php";
     
