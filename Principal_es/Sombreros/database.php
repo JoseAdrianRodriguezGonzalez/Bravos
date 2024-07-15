@@ -2,7 +2,7 @@
     require "./../Inicio/Crear/connect.php";
     require dirname(__DIR__,2)."/vendor/DotEnv.php";
     use DevCoder\DotEnv;
-    (new DotEnv(__DIR__ . '/../../../.env'))->load();
+    (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     echo "b";
     
     
