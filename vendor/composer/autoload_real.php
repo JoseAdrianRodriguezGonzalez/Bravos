@@ -30,12 +30,12 @@ class ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa
         
         require __DIR__ . '/autoload_static.php';
         call_user_func(\Composer\Autoload\ComposerStaticInite875ae8441d070d7dda5f4b47a2117aa::getInitializer($loader));
-        echo "a";
         
         $loader->register(true);
         
         $filesToLoad = \Composer\Autoload\ComposerStaticInite875ae8441d070d7dda5f4b47a2117aa::$files;
         $requireFile = \Closure::bind(static function ($fileIdentifier, $file) {
+            echo "a";
             if (empty($GLOBALS['__composer_autoload_files'][$fileIdentifier])) {
                 $GLOBALS['__composer_autoload_files'][$fileIdentifier] = true;
                 
