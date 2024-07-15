@@ -4,8 +4,11 @@
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
     function peticion($instruccion){
-            
-            $query1=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$instruccion); //envia peticion
+        $server=$_ENV['server'];
+        $user=$_ENV['db_user'];
+        $pass=$_ENV['db_pass'];
+        $dbname=$_ENV['db_name'];
+        $query1=mysqli_query(conectar($server,$user,$pass,$dbname),$instruccion); //envia peticion
             
     
     $json = array();
