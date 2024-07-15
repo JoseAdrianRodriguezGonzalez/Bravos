@@ -5,11 +5,8 @@
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
     echo getenv('server');
     function peticion($instruccion){
-            $server=$_ENV['server'];
-            $user=$_ENV['db_user'];
-            $pass=$_ENV['db_pass'];
-            $dbname=$_ENV['db_name'];
-        $query1=mysqli_query(conectar($server,$user,$pass,$dbname),$instruccion); //envia peticion
+
+        $query1=mysqli_query(conectar("","","",""),$instruccion); //envia peticion
             
     
     $json = array();
