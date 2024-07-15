@@ -4,8 +4,8 @@
    // $dotenv->load();
     
     function conectar($server,$user,$pass,$dbname){  
-        echo "si";
         $conexion= new mysqli($server,$user,$pass,$dbname);
+        echo "si";
         
         if($conexion -> connect_error){
             echo "no";
