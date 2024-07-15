@@ -4,7 +4,7 @@
       (new DotEnv(__DIR__ . '/../../../../.env'))->load();
    // $dotenv=Dotenv\Dotenv::createImmutable('../../../');
    // $dotenv->load();
-    
+    echo $_ENV['server'];
     function conectar($server,$user,$pass,$dbname){  
         $conexion= mysqli_connect($server,$user,$pass,$dbname);
         if($conexion -> connect_error){
