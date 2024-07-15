@@ -18,12 +18,12 @@ class ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa
      */
     public static function getLoader()
     {
-        echo "a";
         if (null !== self::$loader) {
             return self::$loader;
         }
-
+        
         require __DIR__ . '/platform_check.php';
+        echo "a";
 
         spl_autoload_register(array('ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa', 'loadClassLoader'), true, true);
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
