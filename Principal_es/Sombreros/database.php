@@ -4,10 +4,10 @@
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
     function peticion($instruccion){
-        $server=$_ENV['server'];
-        $user=$_ENV['db_user'];
-        $pass=$_ENV['db_pass'];
-        $dbname=$_ENV['db_name'];
+        $server="localhost";
+        $user="u350875428_bravo";
+        $pass="Bravoshats23456%";
+        $dbname="u350875428_bravos";
         $query1=mysqli_query(conectar($server,$user,$pass,$dbname),$instruccion); //envia peticion
             
     
