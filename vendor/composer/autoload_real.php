@@ -41,11 +41,11 @@ class ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa
                 require $file;
             }
         }, null, null);
-      /*  foreach ($filesToLoad as $fileIdentifier => $file) {
-            $requireFile($fileIdentifier, $file);
+        foreach ($filesToLoad as $fileIdentifier => $file) {
             echo "a";
+            $requireFile($fileIdentifier, $file);
         }
-        */
+        
         return $loader;
     }
 }
