@@ -23,11 +23,11 @@ class ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa
         }
         
         require __DIR__ . '/platform_check.php';
-        echo "a";
-
+        
         spl_autoload_register(array('ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa', 'loadClassLoader'), true, true);
         self::$loader = $loader = new \Composer\Autoload\ClassLoader(\dirname(__DIR__));
         spl_autoload_unregister(array('ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa', 'loadClassLoader'));
+        echo "a";
 
         require __DIR__ . '/autoload_static.php';
         call_user_func(\Composer\Autoload\ComposerStaticInite875ae8441d070d7dda5f4b47a2117aa::getInitializer($loader));
