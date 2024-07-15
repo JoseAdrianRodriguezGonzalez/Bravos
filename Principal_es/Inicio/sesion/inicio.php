@@ -23,7 +23,7 @@
         public function Existe($user,$pass){
             $md5pass=md5($pass); //mediante una contraseñe encriptada en md5 la guarda
             $codigo="SELECT * FROM usuarios WHERE Correo ='$user' AND Contraseña ='$md5pass'";//peticion sql, que de la tabla usuarios busca el nombre y la contraseña
-            $query=mysqli_query(conectar($_ENV['servidor'],$_ENV['usuario'],$_ENV['contra'],$_ENV['nombre']),$codigo);//senvia la peticion
+            $query=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$codigo);//senvia la peticion
             
             $rowCount=mysqli_num_rows($query);//cuenta las filas
             if($rowCount>0){ //si es mayor a 0
@@ -34,7 +34,7 @@
         }
         public function setUser($user){
             $instruccion="SELECT *FROM usuarios WHERE Correo ='$user'"; //selecciona el usuario, 
-            $query1=mysqli_query(conectar($_ENV['servidor'],$_ENV['usuario'],$_ENV['contra'],$_ENV['nombre']),$instruccion); //envia peticion
+            $query1=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$instruccion); //envia peticion
             foreach($query1 as $currentUser){ //busca cada usuario 
                 $this ->nombre =$currentUser['Nombre']; //obtiene el mnombre
                 $this ->username =$currentUser['Correo']; //ovbtierne el user

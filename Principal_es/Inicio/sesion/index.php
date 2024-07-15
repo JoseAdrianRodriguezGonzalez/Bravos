@@ -14,8 +14,8 @@
         header("location: ../../index.html");
     }else if(isset($_POST['mail']) && isset($_POST['pass'])){//si no fue así, pregunta si se pusieron los datos
         
-        $UserForm=mysqli_real_escape_string(conectar($_ENV['servidor'],$_ENV['usuario'],$_ENV['contra'],$_ENV['nombre']),$_POST['mail']);
-        $PassForm=mysqli_real_escape_string(conectar($_ENV['servidor'],$_ENV['usuario'],$_ENV['contra'],$_ENV['nombre']),$_POST['pass']);
+        $UserForm=mysqli_real_escape_string(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$_POST['mail']);
+        $PassForm=mysqli_real_escape_string(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$_POST['pass']);
         if($user->Existe($UserForm,$PassForm)){
             
             $userSession->setCurrentUser($UserForm);

@@ -18,7 +18,7 @@
     $postal=$_POST['postal'];
     $newmail=strtolower($mail);
     $preguntar="SELECT *FROM `usuarios` WHERE   `Correo`='$newmail'";
-    $queryConsulta= mysqli_query(conectar($_ENV['servidor'],$_ENV['usuario'],$_ENV['contra'],$_ENV['nombre']),$preguntar);
+    $queryConsulta= mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$preguntar);
     $rowCount=mysqli_num_rows($queryConsulta);
     if($rowCount>0){
         $error="ya existe esa cuenta";
@@ -26,7 +26,7 @@
     }
     else{
         $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `Telefono`, `Contraseña`, `Direccion`, `Ciudad`, `Estado`, `Pais`, `Codigo postal`, `id`, `Correo`) VALUES('$name','$lastname','$phone','$pass','$addres','$city','$state','$country','$postal',NULL,'$newmail')";
-        $query=mysqli_query(conectar($_ENV['servidor'],$_ENV['usuario'],$_ENV['contra'],$_ENV['nombre']),$insertar);
+        $query=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$insertar);
         if($query){
             sesion();
             enviar_email();
