@@ -1,7 +1,7 @@
 <?php
     require "./../Inicio/Crear/connect.php";
-    echo "a";
     require dirname(__DIR__,2)."/vendor/DotEnv.php";
+    echo "a";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
 
