@@ -1,8 +1,8 @@
 <?php
     
     require './../../vendor/autoload.php';
-    echo "a";
     require "./../Inicio/Crear/connect.php";
+    echo "a";
     
     $dotenv=Dotenv\Dotenv::createImmutable(dirname(__DIR__,3));
     $dotenv->load();
