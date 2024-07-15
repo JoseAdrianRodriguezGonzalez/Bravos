@@ -6,8 +6,7 @@
     function peticion($instruccion){
             
             $query1=mysqli_query(conectar($_ENV['server'],$_ENV['db_user'],$_ENV['db_pass'],$_ENV['db_name']),$instruccion); //envia peticion
-            echo $_ENV['db_user'];
-        echo "si";
+            
     
     $json = array();
     while($row = mysqli_fetch_assoc($query1)){
