@@ -29,6 +29,7 @@ class ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa
         spl_autoload_unregister(array('ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa', 'loadClassLoader'));
         
         require __DIR__ . '/autoload_static.php';
+        echo "a";
         call_user_func(\Composer\Autoload\ComposerStaticInite875ae8441d070d7dda5f4b47a2117aa::getInitializer($loader));
         
         $loader->register(true);
@@ -45,7 +46,6 @@ class ComposerAutoloaderInite875ae8441d070d7dda5f4b47a2117aa
             $requireFile($fileIdentifier, $file);
         }
         
-        echo "a";
         return $loader;
     }
 }
