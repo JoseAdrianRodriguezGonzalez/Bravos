@@ -3,12 +3,12 @@
     require __DIR__."/../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../.env'))->load();
+    echo gettype($_ENV['server']);
     function peticion($instruccion){
             $server=$_ENV['server'];
             $user=$_ENV['db_user'];
             $pass=$_ENV['db_pass'];
             $dbname=$_ENV['db_name'];
-            echo gettype($server);
         $query1=mysqli_query(conectar($server,$user,$pass,$dbname),$instruccion); //envia peticion
             
     
