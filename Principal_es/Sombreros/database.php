@@ -1,8 +1,5 @@
 <?php
     require "./../Inicio/Crear/connect.php";
-    require __DIR__."/../../vendor/DotEnv.php";
-    use DevCoder\DotEnv;
-    (new DotEnv(__DIR__ . '/../../../.env'))->load();
     
     function peticion($instruccion){
 
