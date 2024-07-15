@@ -1,6 +1,6 @@
 <?php
-    require('/../../../../vendor/autoload.php');
-    $dotenv=Dotenv\Dotenv::createImmutable('../../../');
+    require('../../../vendor/autoload.php');
+    $dotenv=Dotenv\Dotenv::createImmutable('../../../../');
     $dotenv->load();
     
     function conectar(){
