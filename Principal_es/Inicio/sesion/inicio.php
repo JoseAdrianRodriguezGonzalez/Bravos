@@ -1,6 +1,6 @@
 <?php
     
-    require(__DIR__."../../Crear/connect.php");
+    require(__DIR__."/connect.php");
     
    //Clase usuario
     class user {
