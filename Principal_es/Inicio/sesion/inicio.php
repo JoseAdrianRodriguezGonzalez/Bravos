@@ -1,7 +1,7 @@
 <?php
     
-    require "./../Crear/connect.php";
-    echo "llego";
+    require(__DIR__."../../Crear/connect.php");
+    
    //Clase usuario
     class user {
         //datos, nombre y nombre de usuario 
