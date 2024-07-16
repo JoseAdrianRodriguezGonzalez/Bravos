@@ -1,5 +1,5 @@
 <?php
-    require __DIR__."/DotEnv.php";
+    //require __DIR__."/DotEnv.php";
     require __DIR__."/sesion.php";
     require __DIR__."/inicio.php";
     
