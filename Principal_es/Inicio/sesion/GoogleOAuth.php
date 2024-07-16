@@ -1,4 +1,5 @@
 <?php
+echo"si";
     require "sesion.php";
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
@@ -12,7 +13,6 @@
     $google_OAuth_version='v3';
 
 
-echo"si";
 
     if (isset($_GET['code']) && !empty($_GET['code'])) {
         // Execute cURL request to retrieve the access token
