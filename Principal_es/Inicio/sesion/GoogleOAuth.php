@@ -5,12 +5,12 @@
     require __DIR__ ."/sesion.php";
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
-    echo $_ENV['ID-client-google'];  
-    $google_OAuth_ID=getenv('ID-client-google');
+    echo "hola";  
+    /*$google_OAuth_ID=getenv('ID-client-google');
     $google_OAuth_Secret=getenv('Secret-Client-Google');
     $google_OAuth_redirect=getenv('redirect-api');
     $google_OAuth_version='v3';
-
+*/
 /*
 
     if (isset($_GET['code']) && !empty($_GET['code'])) {
