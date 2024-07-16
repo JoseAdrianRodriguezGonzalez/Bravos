@@ -6,12 +6,12 @@
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     
     $NewUserSession= new SesionUsser();
-    $NewUser=new user();
-    echo"si";
-    $google_OAuth_ID=getenv('ID-client-google');
-    $google_OAuth_Secret=getenv('Secret-Client-Google');
-    $google_OAuth_redirect=getenv('redirect-api');
-    $google_OAuth_version='v3';
+   // $NewUser=new user();
+   $google_OAuth_ID=getenv('ID-client-google');
+   $google_OAuth_Secret=getenv('Secret-Client-Google');
+   $google_OAuth_redirect=getenv('redirect-api');
+   $google_OAuth_version='v3';
+   echo"si";
 
 
 
