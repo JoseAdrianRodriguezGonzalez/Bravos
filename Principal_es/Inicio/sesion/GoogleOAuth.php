@@ -3,7 +3,6 @@
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     require __DIR__ ."/sesion.php";
-    require __DIR__ ."/inicio.php";
     echo "no se";  
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
