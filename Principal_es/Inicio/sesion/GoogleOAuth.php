@@ -1,17 +1,17 @@
 <?php
     require "sesion.php";
     require "inicio.php";
-    echo"si";
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     
     //$userSession=new SesionUsser();
-   //// $NewUser=new user();
-   $google_OAuth_ID=getenv('ID-client-google');
-   $google_OAuth_Secret=getenv('Secret-Client-Google');
-   $google_OAuth_redirect=getenv('redirect-api');
-   $google_OAuth_version='v3';
+    //// $NewUser=new user();
+    $google_OAuth_ID=getenv('ID-client-google');
+    $google_OAuth_Secret=getenv('Secret-Client-Google');
+    $google_OAuth_redirect=getenv('redirect-api');
+    $google_OAuth_version='v3';
+    echo"si";
 
 
 
