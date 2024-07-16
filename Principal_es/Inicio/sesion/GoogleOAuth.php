@@ -1,7 +1,7 @@
 <?php
     require __DIR__."/DotEnv.php";
     require __DIR__."/sesion.php";
-//    require __DIR__."/DotEnv.php";
+    require __DIR__."/inicio.php";
     
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
