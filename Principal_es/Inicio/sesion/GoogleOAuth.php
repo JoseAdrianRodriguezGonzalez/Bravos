@@ -60,31 +60,13 @@
                 $google_name_parts[] = isset($profile['family_name']) ? preg_replace('/[^a-zA-Z0-9]/s', '', $profile['family_name']) : '';
                 // Code goes here...
                 
-                $preguntar="SELECT *FROM `usuarios` WHERE   `Correo`='$newmail'";
-                $queryConsulta= mysqli_query(conectar(),$preguntar);
-                $rowCount=mysqli_num_rows($queryConsulta);
+                session_regenerate_id();
                 $_SESSION['google_loggedin'] = TRUE;
                 $_SESSION['google_email'] = $profile['email'];
                 $_SESSION['google_name'] = implode(' ', $google_name_parts);
-                /*if($rowCount>0){
-                    $error="ya existe esa cuenta";
-                    include_once"./Principal_es/Inicio/Crear/crear.php";
-                }
-                else{
-                    $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `Telefono`, `Contraseña`, `Direccion`, `Ciudad`, `Estado`, `Pais`, `Codigo postal`, `id`, `Correo`) VALUES('$name','$lastname','$phone','$pass','$addres','$city','$state','$country','$postal',NULL,'$newmail')";
-                    $query=mysqli_query(conectar(),$insertar);
-                    if($query){
-                        sesion();
-                        enviar_email();
-                        
-                    }
-                
-                }*/
-                session_regenerate_id();
-
                 echo $_SESSION['google_loggedin'];
                 echo $_SESSION['google_email'];
-                echo $google_name_parts[0];
+                echo $_SESSION['google_name'];
             } else {
                 exit('Could not retrieve profile information! Please try again later!');
             }
