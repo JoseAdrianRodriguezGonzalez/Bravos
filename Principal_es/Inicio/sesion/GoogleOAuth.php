@@ -70,9 +70,9 @@
             $preguntar="SELECT *FROM `usuarios` WHERE   `Correo`='$newmail'";
             $queryConsulta= mysqli_query(conectar(),$preguntar);
             $rowCount=mysqli_num_rows($queryConsulta);
-            echo "si";
             if($rowCount>0){
                 sesion();     
+                echo "si";
                 header("location: ../../index.html");           
             }
             else{
@@ -82,6 +82,7 @@
                 if($query){
                     sesion();
                     enviar_email();
+                    echo "se agrego";
                     header("location: ../../index.html");
                 }
             }
