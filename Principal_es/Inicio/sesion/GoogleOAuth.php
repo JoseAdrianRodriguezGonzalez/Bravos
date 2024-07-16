@@ -7,7 +7,7 @@
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
 
     $userSession=new SesionUsser();
-    $NewUser=new user();
+    $user=new user();
     $google_OAuth_ID=getenv('ID-client-google');
     $google_OAuth_Secret=getenv('Secret-Client-Google');
     $google_OAuth_redirect=getenv('redirect-api');
@@ -71,12 +71,15 @@
             $queryConsulta= mysqli_query(conectar(),$preguntar);
             $rowCount=mysqli_num_rows($queryConsulta);
             if($rowCount>0){
-                $_SESSION['user']=$user;
+                $userSession->setCurrentUser($newmail);
+                $user->setUser($newmail);
+              
                 header("location: ../../index.html");           
                 echo "si";
             }
             else{
-
+                $userSession->setCurrentUser($newmail);
+                $user->setUser($newmail);
                 echo "se agrego";
                 $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `id`, `Correo`) VALUES('$name','$lastname',NULL,'$newmail')";
                 $query=mysqli_query(conectar(),$insertar);
