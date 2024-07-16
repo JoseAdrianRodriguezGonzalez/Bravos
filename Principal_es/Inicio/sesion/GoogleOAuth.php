@@ -65,7 +65,7 @@
             $_SESSION['google_loggedin'] = TRUE;
             $_SESSION['google_email'] = $profile['email'];
             $_SESSION['google_name'] = implode(' ', $google_name_parts);
-            echo  $google_name_parts[0];
+            echo  $google_name_parts[1];
         } else {
             exit('Could not retrieve profile information! Please try again later!');
         }
