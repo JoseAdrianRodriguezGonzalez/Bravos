@@ -3,11 +3,11 @@
     require "inicio.php";
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
+    echo"si";
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
-    echo"si";
     $google_OAuth_ID=getenv('ID-client-google');
     $google_OAuth_Secret=getenv('Secret-Client-Google');
     $google_OAuth_redirect=getenv('redirect-api');
