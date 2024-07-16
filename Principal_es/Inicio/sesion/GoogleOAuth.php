@@ -71,18 +71,18 @@
             $queryConsulta= mysqli_query(conectar(),$preguntar);
             $rowCount=mysqli_num_rows($queryConsulta);
             if($rowCount>0){
-                sesion();     
                 echo "si";
+                sesion();     
                 header("location: ../../index.html");           
             }
             else{
 
+                echo "se agrego";
                 $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `id`, `Correo`) VALUES('$name','$lastname',NULL,'$newmail')";
                 $query=mysqli_query(conectar(),$insertar);
                 if($query){
                     sesion();
                     enviar_email();
-                    echo "se agrego";
                     header("location: ../../index.html");
                 }
             }
