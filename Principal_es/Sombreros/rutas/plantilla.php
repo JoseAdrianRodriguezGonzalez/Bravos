@@ -151,7 +151,7 @@ else{
 <script src="script.js"></script>
 <script>
     let data=<?php echo $json;?>;
-    let typehat=<?php echo" $tip";?>;
+    let typehat=<?php echo $tip;?>.toString();
     console.log(typehat);
     if(1){
         let documentEle=document.getElementById('container');
