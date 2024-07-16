@@ -8,8 +8,6 @@ let contactos=document.getElementById('contactos-btn');
 let Mai=document.getElementById('Mai');
 //const express =require("express");
 
-
-
 let a=false;
 mx.addEventListener('click',()=>{
     location.href="/Principal_es/index.html";
