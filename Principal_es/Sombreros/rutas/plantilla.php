@@ -187,7 +187,7 @@ else{
         //createDiv.textContent=`${data[0]["Color"]}`
         documentEle.appendChild(createDiv);
     }else{
-
+        console.log("flaso")
         let documentEle=document.getElementById('container');
         const createDiv=document.createElement('div');
         createDiv.classList.add('container-hat');
