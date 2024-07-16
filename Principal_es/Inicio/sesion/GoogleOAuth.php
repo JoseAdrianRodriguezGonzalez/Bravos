@@ -1,8 +1,8 @@
 <?php
     require "sesion.php";
     require "inicio.php";
-    echo "no se";  
     require __DIR__."/../../../vendor/DotEnv.php";
+    echo "no se";  
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     //$userSession=new SesionUsser();
