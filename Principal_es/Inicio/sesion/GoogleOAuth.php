@@ -82,7 +82,7 @@
                 }*/
 //                session_regenerate_id();
 
-                echo $profile['given_name'];
+                echo $profile[0];
                 echo $_SESSION['google_email'];
                 echo $_SESSION['google_name'];
             } else {
