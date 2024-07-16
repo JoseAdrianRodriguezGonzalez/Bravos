@@ -2,7 +2,8 @@
     require __DIR__."/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
-
+    require "sesion.php";
+    require "incio.php";
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
     $google_OAuth_ID=getenv('ID-client-google');
