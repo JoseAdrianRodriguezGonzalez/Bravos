@@ -5,9 +5,7 @@
     $userSession = new SesionUsser();//se crea un nuevo objeto de la clase SesionUsser
     $user = new user(); //Crea un usuario
     $user->setUser($userSession->getCurrentUser()); //Crea una sesión
-    if($_SESSION['user']){
-        echo "si";
-    }
+    echo $_SESSION['user'];
     $correo=$user->getCorreo();
         
     $instruccion="SELECT *FROM usuarios WHERE Correo ='$correo'"; //selecciona el usuario, 
