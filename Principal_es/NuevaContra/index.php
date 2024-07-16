@@ -13,7 +13,7 @@
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon-16x16.png"/>
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon-32x32.png"/>
     <link rel="icon" type="image/jpg" href="/assets/icono/favicon.ico"/>
-    <script src="/SrcollReveal/scrollreveal.js"></script>
+   
     <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     <title>Tienda-Bravo's Boots &hats</title>
     <?php
