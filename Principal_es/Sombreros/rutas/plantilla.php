@@ -151,8 +151,8 @@ else{
 <script src="script.js"></script>
 <script>
     let data=<?php echo $json;?>;
-    let typehat=<?php echo $_GET['tip']?>;
-    if(typehat.toString()=="tex"){
+    let typehat=<?php echo $tip?>;
+    if(typehat=="tex"){
         console.log(typeof(typehat));
         let documentEle=document.getElementById('container');
         const createDiv=document.createElement('div');
