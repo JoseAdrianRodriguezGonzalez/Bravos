@@ -151,40 +151,77 @@ else{
 <script src="script.js"></script>
 <script>
     let data=<?php echo $json;?>;
+    let typehat=<?php echo $tip;?>;
     console.log(data);
-    let documentEle=document.getElementById('container');
-    const createDiv=document.createElement('div');
-    createDiv.classList.add('container-hat');
-    const divimg=document.createElement('div');
-    divimg.classList.add('Div-image');
-    createDiv.appendChild(divimg);
-    const img=document.createElement('img');
-    img.classList.add('Hat-img');
-    img.setAttribute('src',`./.${data[0]['link']}`)
-    divimg.appendChild(img)
-    const section1=document.createElement('section');
-    section1.classList.add('section1');
-    createDiv.appendChild(section1);
-    const title1=document.createElement('h1');
-    title1.textContent=`${data[0]["Tipo de sombrero"]}`+ ` ${data[0]["nombre"]}`+ ` ${data[0]["Color"]}`+ ` ${data[0]["Calidad"]} `
-    section1.appendChild(title1)
-    const span1=document.createElement('span');
-    const span3=document.createElement('span');
-    const span4=document.createElement('span');
-    let adata=`${data[0]["Medidas"]}`
-    adata=adata.split("  ")
-    span1.textContent= adata[0];
-    span3.textContent= adata[2];
-    span4.textContent='Medidas';
-    section1.appendChild(span4);
-    section1.appendChild(span1);
-    section1.appendChild(span3);
-    const span2=document.createElement('span');
-    span2.textContent= `$ ${data[0]["Precio"]} `
-    section1.appendChild(span2);
-    //createDiv.textContent=`${data[0]["Color"]}`
-    documentEle.appendChild(createDiv);
+    if(typehat=="tex"){
+        let documentEle=document.getElementById('container');
+        const createDiv=document.createElement('div');
+        createDiv.classList.add('container-hat');
+        const divimg=document.createElement('div');
+        divimg.classList.add('Div-image');
+        createDiv.appendChild(divimg);
+        const img=document.createElement('img');
+        img.classList.add('Hat-img');
+        img.setAttribute('src',`./.${data[0]['link']}`)
+        divimg.appendChild(img)
+        const section1=document.createElement('section');
+        section1.classList.add('section1');
+        createDiv.appendChild(section1);
+        const title1=document.createElement('h1');
+        title1.textContent=`${data[0]["Tipo de sombrero"]}`+ ` ${data[0]["Color"]}`+ ` ${data[0]["Calidad"]} `
+        section1.appendChild(title1)
+        const span1=document.createElement('span');
+        const span3=document.createElement('span');
+        const span4=document.createElement('span');
+        let adata=`${data[0]["Tamaño"]}`
+        adata=adata.split("  ")
+        span1.textContent= adata[0];
+        span3.textContent= adata[2];
+        span4.textContent='Medidas';
+        section1.appendChild(span4);
+        section1.appendChild(span1);
+        section1.appendChild(span3);
+        const span2=document.createElement('span');
+        span2.textContent= `$ ${data[0]["Precio"]} `
+        section1.appendChild(span2);
+        //createDiv.textContent=`${data[0]["Color"]}`
+        documentEle.appendChild(createDiv);
+    }else{
 
+        let documentEle=document.getElementById('container');
+        const createDiv=document.createElement('div');
+        createDiv.classList.add('container-hat');
+        const divimg=document.createElement('div');
+        divimg.classList.add('Div-image');
+        createDiv.appendChild(divimg);
+        const img=document.createElement('img');
+        img.classList.add('Hat-img');
+        img.setAttribute('src',`./.${data[0]['link']}`)
+        divimg.appendChild(img)
+        const section1=document.createElement('section');
+        section1.classList.add('section1');
+        createDiv.appendChild(section1);
+        const title1=document.createElement('h1');
+        title1.textContent=`${data[0]["Tipo de sombrero"]}`+ ` ${data[0]["nombre"]}`+ ` ${data[0]["Color"]}`+ ` ${data[0]["Calidad"]} `
+        section1.appendChild(title1)
+        const span1=document.createElement('span');
+        const span3=document.createElement('span');
+        const span4=document.createElement('span');
+        let adata=`${data[0]["Medidas"]}`
+        adata=adata.split("  ")
+        span1.textContent= adata[0];
+        span3.textContent= adata[2];
+        span4.textContent='Medidas';
+        section1.appendChild(span4);
+        section1.appendChild(span1);
+        section1.appendChild(span3);
+        const span2=document.createElement('span');
+        span2.textContent= `$ ${data[0]["Precio"]} `
+        section1.appendChild(span2);
+        //createDiv.textContent=`${data[0]["Color"]}`
+        documentEle.appendChild(createDiv);
+    }
+    
 </script>
 </body>
 </html>
