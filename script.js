@@ -11,7 +11,6 @@ let animacion=document.getElementById('animacion');
 let arreglo=[].slice.call(grupo.children);
 let Mai=document.getElementById('Mai');
 console.log(arreglo instanceof Array);
-window.sr=ScrollReveal();
 
 animacion.load();
 let a=false;

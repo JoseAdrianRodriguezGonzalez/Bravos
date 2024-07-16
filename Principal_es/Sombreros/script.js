@@ -8,7 +8,7 @@ let contactos=document.getElementById('contactos-btn');
 let Mai=document.getElementById('Mai');
 //const express =require("express");
 
-window.sr=ScrollReveal();
+
 
 let a=false;
 mx.addEventListener('click',()=>{
