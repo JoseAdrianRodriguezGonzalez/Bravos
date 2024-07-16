@@ -2,6 +2,7 @@
     
    // $dotenv=Dotenv\Dotenv::createImmutable('../../../');
    // $dotenv->load();
+   echo "llea";
    require __DIR__."/DotEnv.php";
    use DevCoder\DotEnv;
    (new DotEnv(__DIR__ . '/../../../../.env'))->load();
