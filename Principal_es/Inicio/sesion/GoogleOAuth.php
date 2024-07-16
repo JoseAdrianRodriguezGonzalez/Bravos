@@ -68,9 +68,9 @@
             $lastname=$google_name_parts[1];
             $newmail=$_SESSION['google_email'];
             $preguntar="SELECT *FROM `usuarios` WHERE   `Correo`='$newmail'";
-            echo "si";
             $queryConsulta= mysqli_query(conectar(),$preguntar);
             $rowCount=mysqli_num_rows($queryConsulta);
+            echo "si";
             if($rowCount>0){
                 sesion();     
                 header("location: ../../index.html");           
