@@ -60,12 +60,32 @@
             $google_name_parts[] = isset($profile['given_name']) ? preg_replace('/[^a-zA-Z0-9]/s', '', $profile['given_name']) : '';
             $google_name_parts[] = isset($profile['family_name']) ? preg_replace('/[^a-zA-Z0-9]/s', '', $profile['family_name']) : '';
             // Code goes here...
-            
             session_regenerate_id();
             $_SESSION['google_loggedin'] = TRUE;
             $_SESSION['google_email'] = $profile['email'];
             $_SESSION['google_name'] = implode(' ', $google_name_parts);
-            echo  $google_name_parts[1];
+            $name=$google_name_parts[0];
+            $lastname=$google_name_parts[1];
+            $newmail=$_SESSION['google_email'];
+            $preguntar="SELECT *FROM `usuarios` WHERE   `Correo`='$newmail'";
+            $queryConsulta= mysqli_query(conectar(),$preguntar);
+            $rowCount=mysqli_num_rows($queryConsulta);
+            if($rowCount>0){
+                sesion();     
+                header("location: ../../index.html");           
+            }
+            else{
+
+                $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `id`, `Correo`) VALUES('$name','$lastname',NULL,'$newmail')";
+                $query=mysqli_query(conectar(),$insertar);
+                if($query){
+                    sesion();
+                    enviar_email();
+                    header("location: ../../index.html");
+                }
+            }
+            
+            
         } else {
             exit('Could not retrieve profile information! Please try again later!');
         }
