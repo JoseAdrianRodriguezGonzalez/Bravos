@@ -2,7 +2,6 @@
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
-    require __DIR__ ."/sesion.php";
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
     echo "hola";  
