@@ -2,7 +2,7 @@
     require __DIR__."/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
-    echo "hola";  
+
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
     $google_OAuth_ID=getenv('ID-client-google');
@@ -10,7 +10,6 @@
     $google_OAuth_redirect=getenv('redirect-api');
     $google_OAuth_version='v3';
 
-/*
 
     if (isset($_GET['code']) && !empty($_GET['code'])) {
         // Execute cURL request to retrieve the access token
