@@ -71,7 +71,7 @@
             $queryConsulta= mysqli_query(conectar(),$preguntar);
             $rowCount=mysqli_num_rows($queryConsulta);
             if($rowCount>0){
-                  
+                $_SESSION['user']=$user;
                 header("location: ../../index.html");           
                 echo "si";
             }
