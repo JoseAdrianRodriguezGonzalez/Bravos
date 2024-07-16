@@ -66,7 +66,7 @@
                 $_SESSION['google_loggedin'] = TRUE;
                 $_SESSION['google_email'] = $profile['email'];
                 $_SESSION['google_name'] = implode(' ', $google_name_parts);
-           /*     if($rowCount>0){
+                /*if($rowCount>0){
                     $error="ya existe esa cuenta";
                     include_once"./Principal_es/Inicio/Crear/crear.php";
                 }
@@ -82,9 +82,9 @@
                 }*/
 //                session_regenerate_id();
 
-                echo $profile[0];
+                echo $_SESSION['google_loggedin'];
                 echo $_SESSION['google_email'];
-                echo $_SESSION['google_name'];
+                echo $google_name_parts[0];
             } else {
                 exit('Could not retrieve profile information! Please try again later!');
             }
