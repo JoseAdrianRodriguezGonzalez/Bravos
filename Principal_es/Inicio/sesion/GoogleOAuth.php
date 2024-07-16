@@ -5,7 +5,7 @@
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     
-    $userSession=new SesionUsser();
+    //$userSession=new SesionUsser();
    // $NewUser=new user();
    echo"si";
    $google_OAuth_ID=getenv('ID-client-google');
