@@ -1,6 +1,6 @@
 <?php
-echo"si";
     require "sesion.php";
+    echo"si";
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
