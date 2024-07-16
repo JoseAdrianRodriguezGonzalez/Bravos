@@ -80,7 +80,7 @@
                     }
                 
                 }*/
-//                session_regenerate_id();
+                session_regenerate_id();
 
                 echo $_SESSION['google_loggedin'];
                 echo $_SESSION['google_email'];
