@@ -2,7 +2,7 @@
     
    // $dotenv=Dotenv\Dotenv::createImmutable('../../../');
    // $dotenv->load();
-   require __DIR__."/../../../vendor/DotEnv.php";
+   require __DIR__."/DotEnv.php";
    use DevCoder\DotEnv;
    (new DotEnv(__DIR__ . '/../../../../.env'))->load();
    
