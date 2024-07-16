@@ -1,10 +1,10 @@
 <?php
     require __DIR__."/../../../vendor/DotEnv.php";
+    echo "hola";  
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
-    echo "hola";  
     /*$google_OAuth_ID=getenv('ID-client-google');
     $google_OAuth_Secret=getenv('Secret-Client-Google');
     $google_OAuth_redirect=getenv('redirect-api');
