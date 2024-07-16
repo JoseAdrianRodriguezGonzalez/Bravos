@@ -2,8 +2,8 @@
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
-    require __DIR__ ."sesion.php";
-    require __DIR__ ."inicio.php";
+    require __DIR__ ."/../Principal_es/Inicio/sesion/sesion.php";
+    require __DIR__ ."/../Principal_es/Inicio/sesion/inicio.php";
     echo "no se";  
     //$userSession=new SesionUsser();
     //// $NewUser=new user();
