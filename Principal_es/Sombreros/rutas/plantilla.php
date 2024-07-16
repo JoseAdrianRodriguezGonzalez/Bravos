@@ -31,12 +31,12 @@ function peticion($instruccion){
     }
     return json_encode($json);
 }
-$tejidos="SELECT * FROM `tejidos` WHERE `id`=$item"; //selecciona el usuario, 
 if($tip=="tex"){
     $texanas="SELECT * FROM `texana` WHERE `id`=$item";
     $json=peticion($texanas);
 } 
 else{
+    $tejidos="SELECT * FROM `tejidos` WHERE `id`=$item"; //selecciona el usuario, 
     $json=peticion($tejidos);
 }
 ?>
