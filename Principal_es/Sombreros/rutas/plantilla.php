@@ -31,7 +31,7 @@ function peticion($instruccion){
     }
     return json_encode($json);
 }
-if($tip=="tex"){
+if($_GET['tip']="tex"){
     $texanas="SELECT * FROM `texana` WHERE `id`=$item";
     $json=peticion($texanas);
 } 
