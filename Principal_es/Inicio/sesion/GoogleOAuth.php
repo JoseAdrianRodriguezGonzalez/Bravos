@@ -1,5 +1,5 @@
 <?php
-    require "/sesion.php";
+    require "sesion.php";
     require "inicio.php";
     echo"si";
     require __DIR__."/../../../vendor/DotEnv.php";
