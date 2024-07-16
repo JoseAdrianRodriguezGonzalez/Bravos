@@ -6,8 +6,8 @@
     use DevCoder\DotEnv;
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
 
-    //$userSession=new SesionUsser();
-    //// $NewUser=new user();
+    $userSession=new SesionUsser();
+    $NewUser=new user();
     $google_OAuth_ID=getenv('ID-client-google');
     $google_OAuth_Secret=getenv('Secret-Client-Google');
     $google_OAuth_redirect=getenv('redirect-api');
@@ -81,8 +81,7 @@
                 $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `id`, `Correo`) VALUES('$name','$lastname',NULL,'$newmail')";
                 $query=mysqli_query(conectar(),$insertar);
                 if($query){
-                    sesion();
-                    enviar_email();
+                    
                     header("location: ../../index.html");
                 }
             }
