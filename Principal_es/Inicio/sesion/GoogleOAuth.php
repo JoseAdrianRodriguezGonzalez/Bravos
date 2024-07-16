@@ -2,9 +2,9 @@
     require "sesion.php";
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
-    echo"si";
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
-   
+    
+    echo"si";
     $NewUserSession= new SesionUsser();
     $NewUser=new user();
     $google_OAuth_ID=getenv('ID-client-google');
