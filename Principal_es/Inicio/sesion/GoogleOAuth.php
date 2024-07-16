@@ -1,8 +1,8 @@
 <?php
     require "sesion.php";
-    echo"si";
     require __DIR__."/../../../vendor/DotEnv.php";
     use DevCoder\DotEnv;
+    echo"si";
     (new DotEnv(__DIR__ . '/../../../../.env'))->load();
    
     $NewUserSession= new SesionUsser();
