@@ -153,7 +153,7 @@ else{
     let data=<?php echo $json;?>;
     let typehat=<?php echo $_GET['tip']?>;
     console.log(typehat);
-    if(typehat=="tex"){
+    if(typehat.toString()=="tex"){
         let documentEle=document.getElementById('container');
         const createDiv=document.createElement('div');
         createDiv.classList.add('container-hat');
