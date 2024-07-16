@@ -11,7 +11,7 @@
     $google_OAuth_version='v3';
     echo $google_OAuth_ID;  
 
-
+/*
 
     if (isset($_GET['code']) && !empty($_GET['code'])) {
         // Execute cURL request to retrieve the access token
