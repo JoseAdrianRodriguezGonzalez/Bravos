@@ -111,7 +111,12 @@ body{
 .abajo a{
     flex-grow: 2;
 }
-
+.icon{
+    display: block;
+    width:10vw;
+    height: 3vh;
+    background-color: whitesmoke;
+}
 @media(hover:hover){
     .abajo a:hover{
         background-color: bisque;
