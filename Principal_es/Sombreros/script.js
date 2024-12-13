@@ -61,7 +61,7 @@ const EncontrarDato=(Arreglo)=>{
         if(Arreglo.hasOwnProperty(key)) {
             let value = Arreglo[key];
             //do something with value;
-            console.log("Nombre");
+            //console.log("Nombre");
             return value["Nombre"]
         }
     }
@@ -69,7 +69,6 @@ const EncontrarDato=(Arreglo)=>{
 const ManejarJSON=(JSONPHP)=>{
     let texto=EncontrarDato(JSONPHP);
     console.log(texto);
-    
     let ini=document.getElementById('log');
     let link=document.getElementById('padrea');
     const ini2=document.createElement('span');
