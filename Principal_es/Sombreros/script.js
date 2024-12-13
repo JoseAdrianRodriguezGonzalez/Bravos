@@ -43,7 +43,7 @@ request.onload = function() {
         // Success
         let parsed_response = JSON.parse(this.response.trim());
         console.log(Object.keys(parsed_response));
-        if(Object.keys(parsed_response).length){
+        if(Object.keys(parsed_response)!='0'){
             ManejarJSON(parsed_response);
         }
     } else {
@@ -61,14 +61,13 @@ const EncontrarDato=(Arreglo)=>{
         if(Arreglo.hasOwnProperty(key)) {
             let value = Arreglo[key];
             //do something with value;
-            //console.log("Nombre");
+            console.log("Nombre");
             return value["Nombre"]
         }
     }
 }
 const ManejarJSON=(JSONPHP)=>{
     let texto=EncontrarDato(JSONPHP);
-    console.log(texto);
     let ini=document.getElementById('log');
     let link=document.getElementById('padrea');
     const ini2=document.createElement('span');
@@ -77,7 +76,6 @@ const ManejarJSON=(JSONPHP)=>{
     ini.append(ini2)
     link.replaceChild(ini2,ini);
     link.setAttribute("href","/Principal_es/perfil/index.html");
-    
 }
 let tej=document.getElementById('tejidos');
 let texa=document.getElementById('texanas');
