@@ -42,7 +42,7 @@ request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Success
         let parsed_response = JSON.parse(this.response.trim());
-        console.log(Object.keys(parsed_response).length);
+        console.log(Object.keys(parsed_response));
         if(Object.keys(parsed_response).length){
             ManejarJSON(parsed_response);
         }
