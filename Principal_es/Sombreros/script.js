@@ -68,6 +68,8 @@ const EncontrarDato=(Arreglo)=>{
 }
 const ManejarJSON=(JSONPHP)=>{
     let texto=EncontrarDato(JSONPHP);
+    console.log(texto);
+    
     let ini=document.getElementById('log');
     let link=document.getElementById('padrea');
     const ini2=document.createElement('span');
@@ -76,6 +78,7 @@ const ManejarJSON=(JSONPHP)=>{
     ini.append(ini2)
     link.replaceChild(ini2,ini);
     link.setAttribute("href","/Principal_es/perfil/index.html");
+    
 }
 let tej=document.getElementById('tejidos');
 let texa=document.getElementById('texanas');
