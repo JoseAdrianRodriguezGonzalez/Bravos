@@ -43,7 +43,7 @@ request.onload = function() {
         // Success
         let parsed_response = JSON.parse(this.response.trim());
         console.log(Object.keys(parsed_response));
-        if(Object.keys(parsed_response)!='0'){
+        if(Object.keys(parsed_response).length){
             ManejarJSON(parsed_response);
         }
     } else {
