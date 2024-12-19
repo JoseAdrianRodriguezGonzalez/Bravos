@@ -263,7 +263,6 @@ main{
 }
 .Hat-img{
     width:40vw;
-    height: 20vh;
 }
 .section1{
     color:antiquewhite;
@@ -316,13 +315,11 @@ main{
     .container-hat{
         display:grid;
         grid-template-columns: auto;
-        grid-template-rows: 0.5fr 0.5fr;
-
-    }
-    .Div-image{
+        grid-template-rows: auto auto;
 
     }
     .Hat-img{
-
+        width:50vw;
+        height: 70vh;
     }
 }
