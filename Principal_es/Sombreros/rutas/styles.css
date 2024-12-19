@@ -322,7 +322,7 @@ main{
         align-items: center;
     }
     .Div-image{
-        width:100vw;
-        height: 70vh;
+        width:80vw;
+        height: 50vh;
     }
 }

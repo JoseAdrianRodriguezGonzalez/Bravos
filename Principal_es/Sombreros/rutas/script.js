@@ -111,12 +111,7 @@ var addZoom = target => {
                     backgroundSize: img.naturalWidth + "px"
                     });
                 }
-                container.addEventListener('touchend',()=>{
-                    Object.assign(container.style, {
-                        backgroundPosition: "center",
-                        backgroundSize: "cover"
-                    });
-                })
+
             });
         }else{
       // (B2) ATTACH ZOOM ON MOUSE MOVE
