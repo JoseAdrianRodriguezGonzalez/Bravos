@@ -312,3 +312,9 @@ main{
     justify-content: center;
     align-items: center;
 }
+@media (max-width:800px) {
+    .container-hat{
+        display: grid;
+        grid-template-rows: auto auto;
+    }
+}
