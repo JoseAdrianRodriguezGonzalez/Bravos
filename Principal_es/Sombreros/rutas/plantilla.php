@@ -195,7 +195,7 @@ else{
         const divimg=document.createElement('div');
         divimg.classList.add('Div-image');
         divimg.id='Div-hats';
-        divimg.style.backgroundImage='src',`./.${data[0]['link']}`
+        divimg.style.backgroundImage = `url('./${data[0]['link']}')`;
         createDiv.appendChild(divimg);
         //Here I create the img hash
        // const img=document.createElement('img');
