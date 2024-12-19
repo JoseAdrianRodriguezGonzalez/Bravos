@@ -261,7 +261,6 @@ main{
     width:40vw;
     background-position: center;
     background-size: cover;
-    height:80vh;
 }
 .Hat-img{
     width:40vw;
@@ -320,9 +319,5 @@ main{
         grid-template-rows: auto auto;
         justify-content: center;
         align-items: center;
-    }
-    .Div-image{
-        width:80vw;
-        height: 50vh;
     }
 }
