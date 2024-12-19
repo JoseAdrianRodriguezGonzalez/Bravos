@@ -258,9 +258,7 @@ main{
     font-size: 1.5vw;
 }
 .Div-image{
-    width:40vw;
-    background-position: center;
-    background-size: cover;
+    
 }
 .Hat-img{
     width:40vw;
@@ -311,13 +309,4 @@ main{
     display: grid;
     justify-content: center;
     align-items: center;
-}
-@media (max-width:800px) {
-    .container-hat{
-        display: grid;
-        grid-template-columns: auto;
-        grid-template-rows: auto auto;
-        justify-content: center;
-        align-items: center;
-    }
 }
