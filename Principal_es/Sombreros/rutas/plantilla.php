@@ -159,6 +159,7 @@ else{
         createDiv.classList.add('container-hat');
         const divimg=document.createElement('div');
         divimg.classList.add('Div-image');
+        divimg.id="Div-hats"
         createDiv.appendChild(divimg);
         const img=document.createElement('img');
         img.classList.add('Hat-img');
