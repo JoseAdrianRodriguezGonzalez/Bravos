@@ -316,15 +316,15 @@ main{
     .container-hat{
         display:grid;
         grid-template-columns: auto;
-        grid-template-rows: 0.6fr 0.4fr;
+        grid-template-rows: 0.5fr 0.5fr;
 
     }
     .Div-image{
-        width:50vw;
-        height: 20vh;
+        width:40vw;
+        height: 10vh;
     }
     .Hat-img{
-        width:50vw;
-        height: 20vh;
+        width:40vw;
+        height: 10vh;
     }
 }
