@@ -100,19 +100,26 @@ var addZoom = target => {
                 e.preventDefault();
                 container.ontouchmove=e=>{
                     e.preventDefault();
-                    let rect = e.target.getBoundingClientRect(),
-                    xPos = e.clientX - rect.left,
-                    yPos = e.clientY - rect.top,
-                    xPercent = xPos / (container.clientWidth / 50) + "%",
-                    yPercent = yPos / ((container.clientWidth * ratio) / 50) + "%";
+                    touch = e.touches[0],  // Get the first touch
+                    xPos = touch.clientX - rect.left,
+                    yPos = touch.clientY - rect.top,
+                    xPercent = xPos / (container.clientWidth / 100) + "%",
+                    yPercent = yPos / ((container.clientWidth * ratio) / 100) + "%";
+          
     
                     Object.assign(container.style, {
-                    backgroundPosition: xPercent + " " + yPercent,
-                    backgroundSize: img.naturalWidth + "px"
-                    });
+                        backgroundPosition: `${xPercent} ${yPercent}`,
+                        backgroundSize: `${img.naturalWidth * 2}px`  // Adjust zoom factor (2x here, you can tweak)
+                      });
                 }
 
             });
+            container.addEventListener('touchend', () => {
+                Object.assign(container.style, {
+                  backgroundPosition: "center",
+                  backgroundSize: "cover"
+                });
+              });
         }else{
       // (B2) ATTACH ZOOM ON MOUSE MOVE
         container.onmousemove = e => {
