@@ -195,11 +195,14 @@ else{
         const divimg=document.createElement('div');
         divimg.classList.add('Div-image');
         divimg.id='Div-hats';
+        divimg.style.backgroundImage='src',`./.${data[0]['link']}`
         createDiv.appendChild(divimg);
-        const img=document.createElement('img');
-        img.classList.add('Hat-img');
-        img.setAttribute('src',`./.${data[0]['link']}`)
-        divimg.appendChild(img)
+        //Here I create the img hash
+       // const img=document.createElement('img');
+       // img.classList.add('Hat-img');
+       // img.setAttribute('src',`./.${data[0]['link']}`)
+       // divimg.appendChild(img)
+        //Here it ends
         const section1=document.createElement('section');
         section1.classList.add('section1');
         createDiv.appendChild(section1);
