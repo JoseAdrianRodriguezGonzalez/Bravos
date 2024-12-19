@@ -98,20 +98,28 @@ var addZoom = target => {
         if(window.innerWidth<=800){
             container.addEventListener('touchstart',e=>{
                 e.preventDefault();
-                container.ontouchmove=e=>{
-                    e.preventDefault();
-                    touch = e.touches[0],  // Get the first touch
-                    xPos = touch.clientX - rect.left,
-                    yPos = touch.clientY - rect.top,
-                    xPercent = xPos / (container.clientWidth / 100) + "%",
-                    yPercent = yPos / ((container.clientWidth * ratio) / 100) + "%";
-          
-    
+                container.addEventListener('touchmove', e => {
+                    e.preventDefault();  // Prevent default scrolling behavior
+              
+                    // Get the touch position relative to the container
+                    let rect = container.getBoundingClientRect(),
+                        touch = e.touches[0],  // Get the first touch
+                        xPos = touch.clientX - rect.left,
+                        yPos = touch.clientY - rect.top;
+              
+                    // Calculate the percentage of the container that the touch is at
+                    let xPercent = (xPos / container.clientWidth) * 100;
+                    let yPercent = (yPos / container.clientHeight) * 100;
+              
+                    // Set the background position and zoom size
+                    // Adjust the zoom factor, here we multiply the image size by 2 for a stronger zoom
+                    let zoomFactor = 2; 
                     Object.assign(container.style, {
-                        backgroundPosition: `${xPercent} ${yPercent}`,
-                        backgroundSize: `${img.naturalWidth * 2}px`  // Adjust zoom factor (2x here, you can tweak)
-                      });
-                }
+                      backgroundPosition: `${xPercent}% ${yPercent}%`,
+                      backgroundSize: `${img.naturalWidth * zoomFactor}px ${img.naturalHeight * zoomFactor}px`
+                    });
+                  });
+              
 
             });
             container.addEventListener('touchend', () => {
