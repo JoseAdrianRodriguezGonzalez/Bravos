@@ -258,7 +258,9 @@ main{
     font-size: 1.5vw;
 }
 .Div-image{
-    
+    width:40vw;
+    background-position: center;
+    background-size: cover;
 }
 .Hat-img{
     width:40vw;
