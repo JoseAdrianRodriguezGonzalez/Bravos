@@ -103,8 +103,8 @@ var addZoom = target => {
                     let rect = e.target.getBoundingClientRect(),
                     xPos = e.clientX - rect.left,
                     yPos = e.clientY - rect.top,
-                    xPercent = xPos / (container.clientWidth / 100) + "%",
-                    yPercent = yPos / ((container.clientWidth * ratio) / 100) + "%";
+                    xPercent = xPos / (container.clientWidth / 50) + "%",
+                    yPercent = yPos / ((container.clientWidth * ratio) / 50) + "%";
     
                     Object.assign(container.style, {
                     backgroundPosition: xPercent + " " + yPercent,
