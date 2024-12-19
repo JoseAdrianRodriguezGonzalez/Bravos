@@ -258,10 +258,11 @@ main{
     font-size: 1.5vw;
 }
 .Div-image{
-    
+    width:40vw;  
+    height: 35vh;  
 }
 .Hat-img{
-    width:30vw;
+    width:40vw;
 }
 .section1{
     color:antiquewhite;
@@ -309,10 +310,4 @@ main{
     display: grid;
     justify-content: center;
     align-items: center;
-}
-@media (max-width:800px){
-    .Hat-img{
-        height: 70vh;
-        width:50vw;
-    }
 }
