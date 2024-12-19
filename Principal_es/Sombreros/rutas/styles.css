@@ -261,6 +261,7 @@ main{
     width:40vw;
     background-position: center;
     background-size: cover;
+    height:30vh;
 }
 .Hat-img{
     width:40vw;
@@ -322,6 +323,6 @@ main{
     }
     .Div-image{
         width:80vw;
-    
+        height: 50vh;
     }
 }
