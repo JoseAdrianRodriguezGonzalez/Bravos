@@ -263,6 +263,7 @@ main{
 }
 .Hat-img{
     width:40vw;
+    height: 20vh;
 }
 .section1{
     color:antiquewhite;
@@ -323,7 +324,7 @@ main{
         height: 70vh;
     }
     .Hat-img{
-        width:70vw;
+        width:80vw;
         height: 70vh;
     }
 }
