@@ -316,5 +316,7 @@ main{
     .container-hat{
         display: grid;
         grid-template-rows: auto auto;
+        justify-content: center;
+        align-items: center;
     }
 }
