@@ -318,6 +318,10 @@ main{
         grid-template-rows: auto auto;
 
     }
+    .Div-image{
+        width:50vw;
+        height: 70vh;
+    }
     .Hat-img{
         width:50vw;
         height: 70vh;
