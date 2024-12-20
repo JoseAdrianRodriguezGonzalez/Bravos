@@ -54,7 +54,7 @@ else{
             </a>
             </div>
             <div class="compra">
-                <span class="material-symbols-outlined shopping">
+                <span class="material-symbols-outlined shopping" id="car">
                    <a href="#"> shopping_cart </a>
                     </span>
                 <a href="/Principal_es/Inicio/sesion/index.html" id="padrea">    
