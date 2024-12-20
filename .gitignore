@@ -2,3 +2,4 @@
 .Sombreros.xlsx
 .env
 node_modules/*.
+.env.local

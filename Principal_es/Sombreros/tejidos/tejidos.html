@@ -172,6 +172,11 @@ const JSONDATA =(JSONHats)=>{
         i++
         const createDiv= document.createElement('div');
         createDiv.classList.add('container', `container-${i}`)
+        const AddCar=document.createElement('div')
+        const createSpanCar=document.createElement('span')
+        createSpanCar.textContent="Añadir al carrito"
+        AddCar.appendChild(createSpanCar);
+        AddCar.classList.add("Button-car");
         const link=document.createElement('a')
         link.classList.add('link')
         link.setAttribute('href',`/Principal_es/Sombreros/rutas/plantilla.php?id=${i}&tip="tej"`)
@@ -192,7 +197,8 @@ const JSONDATA =(JSONHats)=>{
                 link.appendChild(img);
             }
         }
-//FlipFop3 contra
+        //FlipFop3 contra
+        createDiv.appendChild(AddCar);
         container.appendChild(createDiv);
 
     });
