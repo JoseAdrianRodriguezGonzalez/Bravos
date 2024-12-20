@@ -381,3 +381,6 @@ main{
         width:30vw;
     }
 }
+.carrito_1.active{
+    visibility: visible;
+}

@@ -351,3 +351,6 @@ Seccí+on de cabecera
     margin-left: auto;
     margin-right: auto;
 }
+.carrito_1.active{
+    visibility: visible;
+}

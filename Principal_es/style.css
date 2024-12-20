@@ -211,7 +211,7 @@ Seccí+on de cabecera
     margin-top: -200%;
     transition: all 500ms ease-in;
 }
-/*Carro*/
+/*Carro*//*
 .carrito_1{
     background-color: rgba(0,0,0,.3);
     position: fixed;
@@ -242,7 +242,7 @@ Seccí+on de cabecera
     justify-items: center;
     align-items:center ;
 }
-
+*/
 /*Slider*/
 .slider{
     overflow: hidden;

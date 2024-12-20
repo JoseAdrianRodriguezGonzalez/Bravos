@@ -50,6 +50,7 @@
                 <img src="/assets/BRAVOS STIKERSo.png" alt="" class="logo-img" title="Principal">
             </a>
             </div>
+            <car-shop></car-shop>
             <div class="compra">
                 <span class="material-symbols-outlined shopping" id="car">
                    <a href="#"> shopping_cart </a>
@@ -247,5 +248,7 @@
         </div>
     </footer>
     <script src="script.js"></script>
+    <script src="/Principal_es/carrito/index.js"></script>
+    <script src="/Principal_es/carrito/CarComp.js"></script>
 </body>
 </html>

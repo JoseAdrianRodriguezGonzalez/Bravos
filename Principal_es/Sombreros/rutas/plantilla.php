@@ -54,6 +54,7 @@ else{
             </a>
             </div>
             <div class="compra">
+                <car-shop></car-shop>
                 <span class="material-symbols-outlined shopping" id="car">
                    <a href="#"> shopping_cart </a>
                     </span>
@@ -223,5 +224,7 @@ else{
     }
     
 </script>
+<script src="/Principal_es/carrito/index.js"></script>
+<script src="/Principal_es/carrito/CarComp.js"></script>
 </body>
 </html>
