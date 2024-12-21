@@ -170,7 +170,7 @@ Seccí+on de cabecera
     .container:hover{
     
         transition: .7s ease all;
-        transform: scale(1.2);
+        transform: scale(1.1);
         
     }
     .texanas span:hover{
@@ -187,6 +187,12 @@ Seccí+on de cabecera
         opacity: 0.6;
         transition: .7s;
         cursor: pointer;
+    }
+    .Button-car:hover{
+        transition: .7s ease all;
+        background-color: #591d1a;
+        color:antiquewhite;
+        cursor:pointer
     }
 }
 .contactos-con{

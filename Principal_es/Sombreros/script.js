@@ -79,15 +79,18 @@ const ManejarJSON=(JSONPHP)=>{
 }
 let tej=document.getElementById('tejidos');
 let texa=document.getElementById('texanas');
-tej.addEventListener('click',()=>{
-    location.href="./tejidos/tejidos.html";
-})
-texa.addEventListener('click',()=>{
-    location.href="./texanas/texanas.html";
-})
+try{
+    tej.addEventListener('click',()=>{
+        location.href="./tejidos/tejidos.html";
+    })
+    texa.addEventListener('click',()=>{
+        location.href="./texanas/texanas.html";
+    })
 
+}catch(Exception){
 
-
+}
+/**Here I can add a product */
 
 
 /**Each value found on the json will be put it in the website and modificate the DOM and also create html elements*/

@@ -79,3 +79,4 @@ const ManejarJSON=(JSONPHP)=>{
     link.replaceChild(ini2,ini);
     link.setAttribute("href","/Principal_es/perfil/index.html");
 }
+/*Here can be added a product on the car*/

@@ -11,7 +11,7 @@
     
 } else {
     (new DotEnv(__DIR__ . '/../../../../.env'))->load(); // Production (Hostinger) environment file
-    echo "I am not local";
+
     }
 
     function conectar(){  

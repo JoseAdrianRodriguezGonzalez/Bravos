@@ -155,6 +155,7 @@ requestdata.onload = function() {
         let parsed_response = JSON.parse(this.response.trim());
         JSONDATA(parsed_response);
         console.log(parsed_response);
+        
     } else {
         // Error
         console.log(this.response);
@@ -178,6 +179,7 @@ const JSONDATA =(JSONHats)=>{
         createSpanCar.textContent="Añadir al carrito"
         AddCar.appendChild(createSpanCar);
         AddCar.classList.add("Button-car");
+        AddCar.id="Button_car"+i;
         const link=document.createElement('a')
         link.classList.add('link')
         link.setAttribute('href',`/Principal_es/Sombreros/rutas/plantilla.php?id=${i}&tip="tej"`)
@@ -205,6 +207,45 @@ const JSONDATA =(JSONHats)=>{
     });
 }
 requestdata.send();
+
+
+const JSONDATA_single =(data)=>{
+    console.log(`${data["Tipo de sombrero"]}`+ ` ${data["Color"]}+  ${data["Calidad"]}+ ${data["nombre"]} + ${data["Precio"]} + ${data['link']}`)
+}
+
+window.addEventListener("DOMContentLoaded", () => {
+    window.addEventListener('click', (e) => {
+        // Check if the clicked element or any of its parents has the Button_car class
+        const button = e.target.closest(".Button-car");
+        
+        if (button) {
+            const ButtonId = button.id;  // Get the ID of the button that was clicked
+            if (ButtonId && ButtonId.includes("Button_car")) {
+                let id_number=parseInt(ButtonId.replace("Button_car",""))
+                requestdata.open('POST', database, true);
+                requestdata.onload = function() {
+                    if (this.status >= 200 && this.status < 400) {
+                        // Success
+                        let parsed_response = JSON.parse(this.response.trim());
+                        JSONDATA_single(parsed_response[id_number-1]);
+                        
+                    }
+                     else {
+                        // Error
+                        console.log(this.response);
+                    }
+                };
+                requestdata.onerror = function() {
+                    console.log('Connection error!');
+                };
+                requestdata.send();
+                //Here can I add new values on local storage
+            }
+        } else {
+            console.log("NO es carro");
+        }
+    });
+});
     </script>
         <script src="/Principal_es/carrito/index.js"></script>
         <script src="/Principal_es/carrito/CarComp.js"></script>

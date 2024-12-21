@@ -253,17 +253,17 @@ main{
     background-color: rgba(255, 228, 196, 0.432);
     border:2.5px solid #260000;
     box-shadow: 10px 10px rgba(0,0,0,0.3);
-
+    height: 120vh;
     padding:10px;
     font-size: 1.5vw;
 }
 .Div-image{
     width:40vw;  
-    height: 35vh;  
+    height: 55vh;  
 }
 .Hat-img{
-    width:50vw;
-    height: 70vh;
+    width:50vw; /* width 30,height 60*/
+    height: 100vh;
 }
 .section1{
     color:antiquewhite;
