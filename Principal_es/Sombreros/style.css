@@ -364,11 +364,11 @@ main{
     display:grid;
     justify-content: center;
     align-items: center;
-    width:20vw;
+    width:25vw;
     height:10vh;
     border:.2vw #661b19 solid;
     margin: auto;
-    font-size: 2.2vw;
+    font-size: 1.8vw;
 }
 @media screen and (max-width:800px) {
     .hats{
