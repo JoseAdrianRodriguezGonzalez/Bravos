@@ -207,9 +207,8 @@ const JSONDATA =(JSONHats)=>{
     });
 }
 requestdata.send();
-
-
 const JSONDATA_single =(data)=>{
+    
     console.log(`${data["Tipo de sombrero"]}`+ ` ${data["Color"]}+  ${data["Calidad"]}+ ${data["nombre"]} + ${data["Precio"]} + ${data['link']}`)
     const jSon={
         "id":data["id"],
@@ -226,6 +225,7 @@ const JSONDATA_single =(data)=>{
         if(jSon.id==item.id){
             item.Cantidad++;
             localStorage.setItem("Product",JSON.stringify(currentItem));
+            
             return true;
         }
         return false;
@@ -233,6 +233,7 @@ const JSONDATA_single =(data)=>{
     if(!exits){
         currentItem.push(jSon)
         localStorage.setItem("Product",JSON.stringify(currentItem));
+        
     }
 }
 
@@ -247,11 +248,12 @@ window.addEventListener("DOMContentLoaded", () => {
                 let id_number=parseInt(ButtonId.replace("Button_car",""))
                 requestdata.open('POST', database, true);
                 requestdata.onload = function() {
+                    const CarCompInstance=document.querySelector('car-shop')
                     if (this.status >= 200 && this.status < 400) {
                         // Success
                         let parsed_response = JSON.parse(this.response.trim());
                         JSONDATA_single(parsed_response[id_number-1]);
-                        
+                        CarCompInstance.AddProducts();
                     }
                      else {
                         // Error
