@@ -365,10 +365,9 @@ main{
     justify-content: center;
     align-items: center;
     width:20vw;
-    height:4vh;
+    height:10vh;
     border:.2vw #661b19 solid;
     margin: auto;
-    padding-bottom: 1vw;
 }
 @media screen and (max-width:800px) {
     .hats{

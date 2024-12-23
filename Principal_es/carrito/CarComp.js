@@ -1,3 +1,5 @@
+
+
 class CarComp extends HTMLElement{
     constructor (){
         super();
@@ -6,6 +8,7 @@ class CarComp extends HTMLElement{
         this.render();
     }
     render(){
+        
         this.innerHTML=`
         <style>
         .carrito_1{
@@ -46,13 +49,20 @@ class CarComp extends HTMLElement{
                             <img src="/assets/icono/dibujo-1.svg" width="30" height="40" class="imagex" id="close"> 
                         </div>
                         <h1>Carro</h1>
-                        <div class="cantidad">
+                        <div class="cantidad" id="Conjunto">
                             <span>Artículos</span>
-                            <span></span>
+                            <div>
+                            </div>
                         </div>
                     </div>
                 </div>
 `;
+        this.AddProducts();
+    }
+    AddProducts(){
+        const conj=document.getElementById('Conjunto')
+        const jsonRetrieve=JSON.parse(localStorage.getItem('Product'))
+        console.log(jsonRetrieve)
     }
 };
 customElements.define("car-shop",CarComp);

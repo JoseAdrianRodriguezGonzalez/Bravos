@@ -254,7 +254,7 @@ Seccí+on de cabecera
 .grupo{
     display:flex;
     width: 600%;
-    height: 600px;
+    height: 150vh;
 }
 .slider_img{
     width:100%;

@@ -211,6 +211,29 @@ requestdata.send();
 
 const JSONDATA_single =(data)=>{
     console.log(`${data["Tipo de sombrero"]}`+ ` ${data["Color"]}+  ${data["Calidad"]}+ ${data["nombre"]} + ${data["Precio"]} + ${data['link']}`)
+    const jSon={
+        "id":data["id"],
+        "Hats":data["Tipo de sombrero"],
+        "Color":data["Color"],
+        "Calidad":data["Calidad"],
+        "nombre":data["nombre"],
+        "Precio":data["Precio"],
+        "link":data["link"],
+        "Cantidad":1
+    }
+    const currentItem=JSON.parse(localStorage.getItem('Product'))||[]
+    const exits=currentItem.some(item=>{
+        if(jSon.id==item.id){
+            item.Cantidad++;
+            localStorage.setItem("Product",JSON.stringify(currentItem));
+            return true;
+        }
+        return false;
+    })
+    if(!exits){
+        currentItem.push(jSon)
+        localStorage.setItem("Product",JSON.stringify(currentItem));
+    }
 }
 
 window.addEventListener("DOMContentLoaded", () => {
