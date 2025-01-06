@@ -115,8 +115,11 @@ class CarComp extends HTMLElement{
             span.textContent=`${hats["Hats"]} `+ `${hats["nombre"]} ` + `${hats["Color"]} ` + `${hats["Calidad"]} `
             img.src=`../${hats["link"]}`
             spanPrice.textContent=`Precio:${hats['Precio']*hats['Cantidad']}`
+            spanPrice.id=`Precio-${hats['id']}`
             quantity.textContent=`Cantidad:\n`
-            quantity.appendChild(this.AddMore(hats['Cantidad']));
+            quantity.id=`${hats['id']}`
+            let string=hats['id'];
+            quantity.appendChild(this.AddMore(hats['Cantidad'],string));
             span.classList.add("Title-hat");
             img.classList.add("Img-Hat");
             spanPrice.classList.add("Price");
@@ -133,17 +136,20 @@ class CarComp extends HTMLElement{
         }
         console.log(jsonRetrieve)
     }
-    AddMore(number){
+    AddMore(number,id){
         const Add=document.createElement('div');
         for(let i=0;i<3;i++){
             const AddDiv=document.createElement('div');
             if(i==1){
                 AddDiv.innerHTML=number;
+                AddDiv.id="Num"+id;
             }else if(i==0){
-                AddDiv.innerHTML=`-`
+                AddDiv.innerHTML=`-`;
+                AddDiv.id="Remove"+id;
             }
             else{
                 AddDiv.innerHTML=`+`;
+                AddDiv.id="Add"+id;
             }
             AddDiv.classList.add=`Container ${i}`
         Add.appendChild(AddDiv);

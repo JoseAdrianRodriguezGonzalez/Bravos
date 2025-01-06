@@ -244,48 +244,16 @@ Seccí+on de cabecera
 }
 */
 /*Slider*/
+.Seccion_sl{
+    display:grid;
+    grid-template-columns: auto auto;
+}
 .slider{
-    overflow: hidden;
-    width: 55%;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 40vw;
 }
-.grupo{
-    display:flex;
-    width: 600%;
-    height: 150vh;
-}
-.slider_img{
-    width:100%;
-    
-}/*Imagenes*/
-.slider_img img{
-    width: 100%;
-    height: 100%;
-}
-/*Botones*/
-.derecha,.izquierda{
-    position: absolute;
-}
-.seccion-mayor{
-    position: relative;
-}
-.derecha{
-    right: 0;
-    top: 50%;;
-    
-    font-size: 3em;
-}
-.izquierda{
-    left: 0;
-    top:50%;
-  
-    font-size: 3em;
-}
-.animacion{
-    transition: all ease-in 0.8s;
-    margin-left: -200%;
+.Caja_s{
+
+    width:35vw;
 }
 /*Sección de compra*/
 .seccion{

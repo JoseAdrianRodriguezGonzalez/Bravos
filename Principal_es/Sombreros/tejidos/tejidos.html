@@ -236,7 +236,32 @@ const JSONDATA_single =(data)=>{
         
     }
 }
-
+const Add=(id)=>{
+    const currentItem=JSON.parse(localStorage.getItem('Product'))||[]
+    let val=0
+    currentItem.forEach(hat => {
+        if(hat.id==id){
+            hat.Cantidad++;
+            val=hat.Cantidad
+        }
+    });
+    localStorage.setItem("Product",JSON.stringify(currentItem));  
+    return val;
+    
+}
+const Remove=(id)=>{
+    const currentItem=JSON.parse(localStorage.getItem('Product'))||[]
+    let val=0
+    currentItem.forEach(hat => {
+        if(hat.id==id){
+            hat.Cantidad--;
+            val=hat.Cantidad
+        }
+    });
+    localStorage.setItem("Product",JSON.stringify(currentItem));  
+    return val;
+    
+}
 window.addEventListener("DOMContentLoaded", () => {
     window.addEventListener('click', (e) => {
         // Check if the clicked element or any of its parents has the Button_car class
@@ -265,10 +290,41 @@ window.addEventListener("DOMContentLoaded", () => {
                 };
                 requestdata.send();
                 //Here can I add new values on local storage
-            }
-        } else {
-            console.log("NO es carro");
+            }    
         }
+        else if(e.target.id.includes("Add")){
+            console.log(e.target.id);
+            const value=e.target.id;
+            let id_value=parseInt(value.replace("Add",""))
+            const val =Add(id_value);
+            const num=document.getElementById("Num"+id_value);
+            num.innerHTML=val;
+            const container = document.getElementsByClassName("container-" + id_value)[0];
+            const secondSpan = container.childNodes[0].childNodes[1];
+            let precio=parseInt(secondSpan.innerHTML.replace("Precio: $",""))
+            const prexioCar=document.getElementById("Precio-"+id_value);
+            let precioActual=parseInt(prexioCar.innerHTML.replace("Precio:",""))
+            prexioCar.innerHTML=`Precio:${precioActual+precio}`
+           // precio.innerHTML="Precio:"+(Precio+Precio)
+        }else if(e.target.id.includes("Remove")){
+            console.log(e.target.id);
+            const value=e.target.id;
+            let id_value=parseInt(value.replace("Remove",""));
+            const val =Remove(id_value);
+            const num=document.getElementById("Num"+id_value);
+            num.innerHTML=val;
+            const container = document.getElementsByClassName("container-" + id_value)[0];
+            const secondSpan = container.childNodes[0].childNodes[1];
+            let precio=parseInt(secondSpan.innerHTML.replace("Precio: $",""))
+            const prexioCar=document.getElementById("Precio-"+id_value);
+            let precioActual=parseInt(prexioCar.innerHTML.replace("Precio:",""))
+            prexioCar.innerHTML=`Precio:${precioActual-precio}`
+        }
+        else{
+            console.log("Aaaa");
+        }
+
+
     });
 });
     </script>

@@ -158,12 +158,17 @@ Seccí+on de cabecera
         transition: .6s;
     }
     .text1:hover{
-        color: rgba(245, 245, 245, 0.623);
+        color: aliceblue;
         transition: .6s;
      }
      .iw:hover, .ii:hover, .im:hover, .ip:hover{
         color: #591d1a;
         cursor: pointer;
+    }
+    .imagex:hover{
+        cursor: pointer;
+        background-color:rgba(0,0,0,.3);
+        transition: .6s;
     }
 }/*Botón de contactos*/
 .contactos-con{
@@ -206,49 +211,49 @@ Seccí+on de cabecera
     margin-top: -200%;
     transition: all 500ms ease-in;
 }
+/*Carro*//*
+.carrito_1{
+    background-color: rgba(0,0,0,.3);
+    position: fixed;
+    top:0;
+    left:0;
+    right:0;
+    bottom:0;
+    display: grid;
+    align-items: center;
+    justify-content:end;
+    visibility: hidden;
+}
+.imagexlogo{
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    
+}
+.imagex{
+    grid-column: 3;
+}
+.carrito_1.active{
+    visibility: visible;
+}
+.layer{
+    background-color:rgba(255, 228, 196, 1);
+    display :inherit;
+
+    justify-items: center;
+    align-items:center ;
+}
+*/
 /*Slider*/
+.Seccion_sl{
+    display:grid;
+    grid-template-columns: auto auto;
+}
 .slider{
-    overflow: hidden;
-    width: 30vw;
-    max-width: 1500px;
-    margin-left: auto;
-    margin-right: auto;
+    width: 40vw;
 }
-.grupo{
-    display:flex;
-    width: 180vw;
-    height: 65vh;
-}
-.slider_img{
-    width:100%;
-    
-}/*Imagenes*/
-.slider_img img{
-    width: 100%;
-    height: 100%;
-}
-/*Botones*/
-.derecha,.izquierda{
-    position: absolute;
-}
-.seccion-mayor{
-    position: relative;
-}
-.derecha{
-    right: 0;
-    top: 50%;;
-    
-    font-size: 3em;
-}
-.izquierda{
-    left: 0;
-    top:50%;
-  
-    font-size: 3em;
-}
-.animacion{
-    transition: all ease-in 0.8s;
-    margin-right: 250vw;
+.Caja_s{
+
+    width:35vw;
 }
 /*Sección de compra*/
 .seccion{
@@ -300,8 +305,8 @@ Seccí+on de cabecera
     justify-self: center;
     position: absolute;
     align-self: center;
-    font-size: 4vw;
-    color:whitesmoke;
+    font-size: 1.5rem;
+    color:black;
    
     
     
@@ -350,7 +355,4 @@ Seccí+on de cabecera
 .instagram-qr {
     margin-left: auto;
     margin-right: auto;
-}
-.carrito_1.active{
-    visibility: visible;
 }
