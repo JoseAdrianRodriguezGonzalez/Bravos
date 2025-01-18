@@ -95,6 +95,7 @@ request.onload = function() {
 request.onerror = function() {
     console.log('Connection error!');
 };
+console.log('Sending request...');
 request.send();
 /**Manejo de los AJAX */
 const EncontrarDato=(Arreglo)=>{
