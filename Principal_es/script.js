@@ -73,20 +73,23 @@ izquierda.addEventListener('click',()=>{
 let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php";
 let request = new XMLHttpRequest();
 
-request.open('POST', './../perfil/Variables.php', true);
+request.open('POST', './perfil/Variables.php', true);
 
 request.onload = function() {
-    console.log("hay algo")
     if (this.status >= 200 && this.status < 400) {
         // Success
-        let parsed_response = JSON.parse(this.response.trim());
-        console.log(Object.keys(parsed_response).length);
-        if(Object.keys(parsed_response).length){
-            ManejarJSON(parsed_response);
+        try {
+            let parsed_response = JSON.parse(this.response.trim());
+            console.log(Object.keys(parsed_response).length);
+            if (Object.keys(parsed_response).length) {
+                ManejarJSON(parsed_response);
+            }
+        } catch (e) {
+            console.error('Error parsing JSON:', e);
         }
     } else {
         // Error
-        console.log(this.response);
+        console.error('Server error:', this.status, this.response);
     }
 };
 request.onerror = function() {
