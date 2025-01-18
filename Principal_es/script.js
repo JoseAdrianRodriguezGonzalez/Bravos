@@ -8,7 +8,7 @@ let izquierda=document.getElementById('izq');
 let derecha=document.getElementById('der');
 let grupo=document.getElementById('gr');
 let animacion=document.getElementById('animacion');
-//let arreglo=[].slice.call(grupo.children);
+let arreglo=[].slice.call(grupo.children);
 let Mai=document.getElementById('Mai');
 console.log(arreglo instanceof Array);
 
@@ -73,29 +73,24 @@ izquierda.addEventListener('click',()=>{
 let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php";
 let request = new XMLHttpRequest();
 
-request.open('POST', 'https://bravosbootsandhats.com/perfil/Variables.php', true);
+request.open('POST', './perfil/Variables.php', true);
 
 request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
         // Success
-        try {
-            let parsed_response = JSON.parse(this.response.trim());
-            console.log(Object.keys(parsed_response).length);
-            if (Object.keys(parsed_response).length) {
-                ManejarJSON(parsed_response);
-            }
-        } catch (e) {
-            console.error('Error parsing JSON:', e);
+        let parsed_response = JSON.parse(this.response.trim());
+        console.log(Object.keys(parsed_response).length);
+        if(Object.keys(parsed_response).length){
+            ManejarJSON(parsed_response);
         }
     } else {
         // Error
-        console.error('Server error:', this.status, this.response);
+        console.log(this.response);
     }
 };
 request.onerror = function() {
     console.log('Connection error!');
 };
-console.log('Sending request...');
 request.send();
 /**Manejo de los AJAX */
 const EncontrarDato=(Arreglo)=>{
