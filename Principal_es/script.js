@@ -8,7 +8,7 @@ let izquierda=document.getElementById('izq');
 let derecha=document.getElementById('der');
 let grupo=document.getElementById('gr');
 let animacion=document.getElementById('animacion');
-let arreglo=[].slice.call(grupo.children);
+//let arreglo=[].slice.call(grupo.children);
 let Mai=document.getElementById('Mai');
 console.log(arreglo instanceof Array);
 
