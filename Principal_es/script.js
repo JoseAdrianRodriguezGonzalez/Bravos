@@ -40,7 +40,7 @@ contactos.addEventListener('click',()=>{
         
     }
 });
-
+/*
 derecha.addEventListener('click',()=>{
     ultimo=arreglo.pop();
 
@@ -68,7 +68,7 @@ izquierda.addEventListener('click',()=>{
            
         }
     }, 500);
-})
+})*/
 /***Manejo de JSON */
 
 console.log("si")
