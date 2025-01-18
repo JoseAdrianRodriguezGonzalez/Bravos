@@ -134,7 +134,7 @@ class CarComp extends HTMLElement{
             div.appendChild(quantity);
             conj.appendChild(div)
         }
-        console.log(jsonRetrieve)
+        console.log(jsonRetrieve.length)
         
     }
     AddMore(number,id){
