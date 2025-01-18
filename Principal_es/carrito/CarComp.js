@@ -136,7 +136,7 @@ class CarComp extends HTMLElement{
         }
         console.log(jsonRetrieve)
         if(jsonRetrieve.length>0){
-            this.innerHTML("<div>Hola</div>")
+            this.innerHTML=`<div>Hola</div>`
         }
     }
     AddMore(number,id){
