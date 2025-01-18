@@ -24,6 +24,7 @@
     }
     else{
         $insertar= "INSERT INTO `usuarios` (`Nombre`, `Apellidos`, `Telefono`, `Contraseña`, `Direccion`, `Ciudad`, `Estado`, `Pais`, `Codigo postal`, `id`, `Correo`) VALUES('$name','$lastname','$phone','$pass','$addres','$city','$state','$country','$postal',NULL,'$newmail')";
+        echo"enviando";
         $query=mysqli_query(conectar(),$insertar);
         if($query){
             echo "aqui";
