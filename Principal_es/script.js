@@ -73,7 +73,7 @@ izquierda.addEventListener('click',()=>{
 let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php";
 let request = new XMLHttpRequest();
 
-request.open('POST', './perfil/Variables.php', true);
+request.open('POST', '/Principal_es/perfil/Variables.php', true);
 
 request.onload = function() {
     console.log("hay algo")
