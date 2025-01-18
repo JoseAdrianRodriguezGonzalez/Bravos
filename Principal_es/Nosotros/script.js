@@ -39,7 +39,7 @@ contactos.addEventListener('click',()=>{
 let url = "/xampp/htdocs/bravo/Principal_es/perfil/index.php";
 let request = new XMLHttpRequest();
 
-request.open('POST', '/Principal_es/perfil/Variables.php', true);
+request.open('POST', 'https://bravosbootsandhats.com/perfil/Variables.php', true);
 
 request.onload = function() {
     if (this.status >= 200 && this.status < 400) {
